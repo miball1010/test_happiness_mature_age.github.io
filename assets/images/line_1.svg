@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1205">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_未命名漸層_2);
+      }
+
+      .cls-1, .cls-2, .cls-3 {
+        stroke-width: 0px;
+      }
+
+      .cls-1, .cls-3 {
+        opacity: .3;
+      }
+
+      .cls-2, .cls-4 {
+        fill: none;
+      }
+
+      .cls-4 {
+        stroke: #fff;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        fill: url(#_未命名漸層_5);
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" y="-386" width="1920" height="1591"/>
+    </clipPath>
+    <linearGradient id="_未命名漸層_5" data-name="未命名漸層 5" x1="478.9" y1="926.65" x2="478.9" y2="42.47" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+    <linearGradient id="_未命名漸層_2" data-name="未命名漸層 2" x1="251.9" y1="937.98" x2="251.9" y2="53.8" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#fff"/>
+    </linearGradient>
+  </defs>
+  <g class="cls-5">
+    <path class="cls-3" d="M2341,247.5s-211-196.24-482.5-204.87c-271.5-8.63-419.5,327.37-893.5,403.37S-3,316.85-155,216.42C-307,116-906.9,31.95-1271,532s-76.04,382.67-76.04,382.67h3760.04l-72-667.16Z"/>
+    <path class="cls-1" d="M2114,258.84s-211-196.24-482.5-204.87c-271.5-8.63-419.5,327.37-893.5,403.37S-230,328.18-382,227.76c-152-100.42-751.9-184.47-1116,315.58-364.1,500.05-76.04,382.67-76.04,382.67h3760.04l-72-667.16Z"/>
+    <path class="cls-4" d="M-11.89,409.81s437.55,146.18,887.22,73.18c449.67-73,668.22-416.4,845.94-400.2,177.73,16.2,236.23,106.6,236.23,106.6"/>
+    <path class="cls-4" d="M-94.5,282.5s447,222,945.79,221.26c498.12-.74,730.64-455.3,924.97-437.59,194.33,17.72,258.3,116.56,258.3,116.56"/>
+  </g>
+</svg>

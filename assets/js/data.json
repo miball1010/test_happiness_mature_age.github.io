@@ -1,0 +1,110 @@
+{
+    "issue":[
+        {
+            "title":"銀髮職場",
+            "text":"探討國內外高齡就業趨勢，以及政府和企業如何營造友善職場環境的布局",
+            "delay":100
+        },
+        {
+            "title":"退休理財",
+            "text":"分享如何累積財富，及早規劃安養信託、以房養老、預立遺囑等財務計畫",
+            "delay":200
+        },
+        {
+            "title":"智慧照護",
+            "text":"以數位化升級並加速傳統醫療系統轉型，聚焦未來智慧醫療美好願景",
+            "delay":300
+        },
+        {
+            "title":"健康樂活",
+            "text":"提倡日常維持三動（腦動、運動、社交互動），打造身心健康、預防失智及延緩老化的樂活人生",
+            "delay":400
+        }
+    ],
+    "speaker":[
+        {
+            "id":1,
+            "name": "胡念之",
+            "img": "assets/images/speakers/speaker-9.jpg",
+            "company":"新光醫院家庭醫",
+            "title": "學科主治醫師",
+            "experience": "經歷：<br>新光醫院家庭醫學科主治醫師<br><br>學歷：<br>台灣大學公共衛生學院職業醫學與工業衛生研究所碩士<br>高雄醫學大學醫學院醫學士專科<br><br>證書：<br>台灣家庭醫學專科醫師<br>台灣職業醫學專科醫師<br>台灣安寧緩和醫學專科醫師",
+            "time": "10:45 am- 11:05 am",
+            "speech_title": "精彩人生＆智慧照護",
+            "speech_subtitle": "擁抱樂齡 健康長壽"
+        },
+        {
+            "id":2,
+            "name": "彭培業",
+            "img": "assets/images/speakers/speaker-3.jpg",
+            "company":"台灣房屋集團",
+            "title": "總裁",
+            "experience": "現職：<br>台灣房屋集團 總裁<br>亞洲健康智慧園區 董事長",
+            "time": "11:05 am- 11:25 am",
+            "speech_title": "精彩人生＆智慧照護",
+            "speech_subtitle": "領航第五代健康地產"
+        }, {
+            "id":1,
+            "name": "胡念之",
+            "img": "assets/images/speakers/speaker-9.jpg",
+            "company":"新光醫院家庭醫",
+            "title": "學科主治醫師",
+            "experience": "經歷：<br>新光醫院家庭醫學科主治醫師<br><br>學歷：<br>台灣大學公共衛生學院職業醫學與工業衛生研究所碩士<br>高雄醫學大學醫學院醫學士專科<br><br>證書：<br>台灣家庭醫學專科醫師<br>台灣職業醫學專科醫師<br>台灣安寧緩和醫學專科醫師",
+            "time": "10:45 am- 11:05 am",
+            "speech_title": "精彩人生＆智慧照護",
+            "speech_subtitle": "擁抱樂齡 健康長壽"
+        },{
+            "id":2,
+            "name": "彭培業",
+            "img": "assets/images/speakers/speaker-3.jpg",
+            "company":"台灣房屋集團",
+            "title": "總裁",
+            "experience": "現職：<br>台灣房屋集團 總裁<br>亞洲健康智慧園區 董事長",
+            "time": "11:05 am- 11:25 am",
+            "speech_title": "精彩人生＆智慧照護",
+            "speech_subtitle": "領航第五代健康地產"
+        }, {
+            "id":1,
+            "name": "胡念之",
+            "img": "assets/images/speakers/speaker-9.jpg",
+            "company":"新光醫院家庭醫",
+            "title": "學科主治醫師",
+            "experience": "經歷：<br>新光醫院家庭醫學科主治醫師<br><br>學歷：<br>台灣大學公共衛生學院職業醫學與工業衛生研究所碩士<br>高雄醫學大學醫學院醫學士專科<br><br>證書：<br>台灣家庭醫學專科醫師<br>台灣職業醫學專科醫師<br>台灣安寧緩和醫學專科醫師",
+            "time": "10:45 am- 11:05 am",
+            "speech_title": "精彩人生＆智慧照護",
+            "speech_subtitle": "擁抱樂齡 健康長壽"
+        }
+    ],
+    "life":[
+        {
+            "url":"https://thebetteraging.businesstoday.com.tw/article/detail/202308220037",
+            "img":"https://doqvf81n9htmm.cloudfront.net/data/crop_article/148935/DONG7403_0.jpg_1140x855.jpg",
+            "text":"勇敢求職吧，這世界比你想像更美好！中高齡重返職場，除了自己快樂、經濟獨立，也作回自己"
+        },
+        {
+            "url":"https://thebetteraging.businesstoday.com.tw/article/detail/202307230012",
+            "img":"https://doqvf81n9htmm.cloudfront.net/data/crop_article/147614/300076163_2693929430737098_7786828092539945922_n1.jpg_1140x855.jpg",
+            "text":"他罹癌、戴助聽器，仍勇闖日本打工換宿！76歲爺離開舒適圈、體驗不同生活：能工作是幸福的事"
+        },
+        {
+            "url":"https://thebetteraging.businesstoday.com.tw/article/detail/202305180024",
+            "img":"https://doqvf81n9htmm.cloudfront.net/data/crop_article/144811/01.jpg_1140x855.jpg",
+            "text":"太肥太油不准吃，9旬父怨「活著還有啥意思？」丁菱娟：改變觀念陪爸媽終老，用他喜歡方式表達愛"
+        },
+        {
+            "url":"https://thebetteraging.businesstoday.com.tw/article/detail/202306200006",
+            "img":"https://doqvf81n9htmm.cloudfront.net/data/crop_article/146315/16Shutterstock_2223026981.jpg_1140x855.jpg",
+            "text":"「家產都分了還吵不停！」富爸怒撤銷贈與，竟被兒告上法庭…會計師教財富傳承：先照顧好自己"
+        },
+        {
+            "url":"https://thebetteraging.businesstoday.com.tw/article/detail/202210270043",
+            "img":"https://doqvf81n9htmm.cloudfront.net/data/crop_article/136219/S__55297301.jpg_1140x855.jpg",
+            "text":"60後不減肥、不養生，這樣吃出健康瘦！譚敦慈3建議照顧好自己：一個人也要好好過生活"
+        },
+        {
+            "url":"https://thebetteraging.businesstoday.com.tw/article/detail/202303020017",
+            "img":"https://doqvf81n9htmm.cloudfront.net/data/crop_article/141516/Shutterstock_2013039458.jpg_1140x855.jpg",
+            "text":"心臟疾病是女性第2號殺手！進入更年期後，罹高血壓、糖尿病比例增3倍…健康5招遠離威脅"
+        }
+    ]
+}

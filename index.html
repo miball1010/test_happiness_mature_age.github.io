@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--清cache -->
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="content-type" content="no-cache, must-revalidate" />
+    <meta http-equiv="expires" content="Wed, 26 Feb 1997 08:21:57 GMT" />
+
+    <!--SEO-->
+    <meta name="keywords" content="今周刊, 幸福熟齡, 銀髮族, 高齡, 退休, 提案">
+    <meta name="description"
+        content="富足退休．活出精彩！ 《今周刊》第七屆幸福熟齡臺日交流論壇，邀請您10/11(三)前往格萊天漾大飯店 13樓格萊廳（台北市萬華區艋舺大道101號），一起快樂優雅地擁抱熟齡，為自己創造更多精彩的可能！特別企劃「熟齡夢想填答」線上進行中，完成填答，就有機會把千元好禮帶回家！論壇活動熱烈報名中，點擊連結了解更多>>">
+    <meta property="og:title" content="夢想 • 富足  熟齡生活提案 | 2023第七屆幸福熟齡臺日交流論壇">
+    <meta property="og:type" content="website">
+    <meta property="og:description"
+        content="富足退休．活出精彩！ 《今周刊》第七屆幸福熟齡臺日交流論壇，邀請您10/11(三)前往格萊天漾大飯店 13樓格萊廳（台北市萬華區艋舺大道101號），一起快樂優雅地擁抱熟齡，為自己創造更多精彩的可能！特別企劃「熟齡夢想填答」線上進行中，完成填答，就有機會把千元好禮帶回家！論壇活動熱烈報名中，點擊連結了解更多>> ">
+    <meta property="og:image"
+        content="https://events.businesstoday.com.tw/2023/happiness_mature_age/assets/images/og-image.jpg">
+
+    <!-- css -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="assets/css/main.css?20240506">
+
+
+    <!-- js -->
+
+    <!-- AOS -->
+    <link href="assets/css/aos.css" rel="stylesheet">
+    <script src="assets/js/aos.js"></script>
+
+    <!-- swiper -->
+
+    <!-- 字體 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-E8H9YJZQJP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-E8H9YJZQJP');
+    </script>
+
+</head>
+
+<body>
+    <div id="app">
+        <div class="navbar">
+            <div class="logo">
+                <a href="https://www.businesstoday.com.tw/" target="_blank"><img
+                        src="assets/images/logos/logo-white.svg" alt=""></a>
+                <a href="https://thebetteraging.businesstoday.com.tw/" target="_blank"><img
+                        src="assets/images/logos/logo-thebetterage.svg" alt=""></a>
+            </div>
+            <ul class="menu" :class="{active:menuIsopen}">
+                <li @click="scrollTo('section3')">論壇引言</li>
+                <li @click="scrollTo('section4')">四大提案</li>
+                <li @click="scrollTo('section5')">講師陣容</li>
+                <li @click="scrollTo('section6')">論壇議程</li>
+                <li @click="scrollTo('section7')">立即報名</li>
+                <li @click="scrollTo('section8')">活動資訊</li>
+                <li @click="scrollTo('section9')">樂齡生活學</li>
+                <li class="social_media_mb">
+                    <a href="https://www.facebook.com/BToday/" target="_blank">
+                        <img src="assets/images/logos/logo-fb.svg" alt="">
+                    </a>
+                    <a href="https://line.me/R/ti/p/%40btoday" target="_blank">
+                        <img src="assets/images/logos/logo-line.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+            <div class="social_media">
+                <a href="https://www.facebook.com/BToday/" target="_blank"> <img src="assets/images/logos/logo-fb.svg"
+                        alt=""></a>
+                <a href="https://line.me/R/ti/p/%40btoday" target="_blank"> <img src="assets/images/logos/logo-line.svg"
+                        alt=""></a>
+            </div>
+            <div class="menu_btn" @click="menuIsopen=!menuIsopen">
+                <img src="assets/images/menu_btn.svg" alt="">
+            </div>
+        </div>
+
+        <div class="section section1">
+            <img class="dot1" src="assets/images/dot_1.png" alt="">
+            <img class="line1" src="assets/images/line_1.svg" alt="">
+            <img class="slogan1" src="assets/images/slogan_1.png" alt="" > 
+            <img class="slogan2" src="assets/images/slogan_2.png" alt="">
+            <div class="kv_logo" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="300">
+                <img class="circle_line" src="assets/images/circle_line.svg" alt="">
+                <img class="mature_logo" src="assets/images/logos/mature-age-logo.png" alt="">
+            </div>
+            <img class="square" src="assets/images/square.svg" alt="">
+            <img class="flower1" src="assets/images/flower.svg" alt="">
+            <img class="flower2" src="assets/images/flower.svg" alt="">
+            <img class="note1" src="assets/images/note_1.svg" alt="">
+            <img class="note2" src="assets/images/note_2.svg" alt="">
+            <img class="note3" src="assets/images/note_3.svg" alt="">
+            <img class="note4" src="assets/images/note_4.svg" alt="">
+            <img class="people" src="assets/images/people.svg" alt="" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="300">
+        </div>
+
+        <!-- 活動直播 -->
+        <div class="section section2">
+            <div class="container">
+                <div class="title">活動直播</div>
+                <iframe class="video" src="https://www.youtube.com/embed/btPv0-d3NbE?si=RiEBhIlKVDdfznCf"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <!-- 論壇引言 -->
+        <div class="section section3">
+            <div class="container" data-aos="fade-up">
+                <div class="title">論壇引言</div>
+                <div class="introduction">
+                    迎接2025年的超高齡社會的來臨，台灣已進入兩年倒數階段。<br><br>
+                    據國發會最新統計，台灣65歲以上人口已占總體的17.56％，並將在2025年突破兩成，屆時全台每5人就有1位是高齡者，而此族群人口數更將在2042年正式突破700萬大關。隨著進入「黃金世代」的熟齡族群人口逐漸上升，將引發勞動力、經濟發展、社會福利、理財安養以及身心健康等問題。<br><br>
+                    人口老化是全球共同的挑戰，也是不可逆的趨勢，面對退休後的第二人生，我們該做什麼準備和練習？<br><br>
+                    《今周刊》以「夢想」與「富足」為主題，提供您更豐富的退休生活提案，讓您快樂優雅地擁抱熟齡，為自己創造更多精彩的可能！<br><br>
+                </div>
+            </div>
+            <img class="line2" src="assets/images/line_2.svg" alt="">
+        </div>
+
+        <!-- 四大提案 -->
+        <div class="section section4">
+            <div class="container">
+                <div class="title">四大提案</div>
+                <div class="issue_container">
+                    <div class="issue" v-for="item in issue" data-aos="zoom-in" :data-aos-delay="item.delay">
+                        <div class="issue_title">{{item.title}}</div>
+                        <div class="issue_text">{{item.text}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 講師陣容 -->
+        <div class="section section5">
+            <div class="container">
+                <div class="title">講師陣容</div>
+                <div class="main_speaker" data-aos="fade-up">
+                    <div class="speaker_left">
+                        <img src="assets/images/speakers/speaker-1.jpg" alt="">
+                    </div>
+
+                    <div class="speaker_right">
+                        <div class="speaker_name">秋山弘子</div>
+                        <div class="speaker_company">東京大學高齡社會綜合研究機構</div>
+                        <div class="speaker_title">客座教授</div>
+                        <div class="speaker_experience">
+                            國際知名的老年學專家，30年來持續進行日本高齡者調查並追蹤個案進展，研究高齡者的年齡增長與健康、經濟、人際關係之間的變化。近年致力於「長壽社會造鎮」與產官學民合作推動「生活實驗室」（Living
+                            Lab），追求最適合人生百年時代的生活方式與社會樣態。</div>
+                    </div>
+                    <div class="yellow_square yellow_square1"></div>
+                    <div class="yellow_square yellow_square2"></div>
+                    <div class="yellow_square yellow_square3"></div>
+                </div>
+                <div class="other_speaker">
+                    <div class="speaker_box" v-for="item in speaker" data-aos="flip-left">
+                        <div class="other_speaker_img"> <img :src="item.img" alt=""></div>
+
+                        <div class="other_speaker_name">{{item.name}}</div>
+                        <div class="other_speaker_company">{{item.company}}</div>
+                        <div class="other_speaker_title">{{item.title}}</div>
+                        <div class="other_speaker_btn" @click="speaker_popup(item.id-1)">MORE</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="speaker_popup" :class="{active:popupIsopen}">
+            <div class="speaker_popup_bg">
+                <div class="popup_content">
+                    <div class="close_area">
+                        <div class="popup_close" @click="speaker_close">×</div>
+                    </div>
+                    <div class="popup_top">
+                        <img class="speaker_popup_img" :src="img" alt="">
+                        <div class="speaker_info">
+                            <h2 class="speaker_name ">{{name}}</h2>
+                            <h3 class="speaker_title">{{company}} {{title}}</h3>
+                            <hr class="line_dark">
+                            <br>
+                            <div class="intro" v-html="experience"></div>
+                        </div>
+                    </div>
+                    <hr class="dashline_1">
+                    <div class="popup_bottom">
+                        <h3 class="popup_agenda_title">議程</h3>
+                        <div class="bottom_detail">
+                            <div class="time_detail">
+                                <h2>2023.10.11</h2>
+                                <p>{{time}}</p>
+                            </div>
+                            <div class="topic_detail">
+                                <p>{{speech_title}}</p>
+                                <h2>{{speech_subtitle}}</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="section_bg">
+            <!-- 論壇議程 -->
+            <div class="section section6">
+                <div class="container" :style="{height:scheduleIsopen?'auto':'50vw'}">
+                    <div class="title">論壇議程</div>
+                    <div class="schedule_time">10/11 (三)</div>
+                    <div class="schedule">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>時間</th>
+                                    <th>流程</th>
+                                    <th>講者</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>08:30 - 09:00</th>
+                                    <td>來賓、讀者報到</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>09:00 - 09:03</th>
+                                    <td>主辦單位致詞</td>
+                                    <td>今周刊 發行人 <div class="schedule_name">梁永煌</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>09:03 - 09:10</th>
+                                    <td>貴賓致詞</td>
+                                    <td>勞動部<div>長官</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>09:10 - 09:45</th>
+                                    <td>活在長壽社會</td>
+                                    <td>日本東京大學高齡社會綜合研究中心 客座教授<div class="schedule_name">秋山弘子</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>09:45- 10:25</th>
+                                    <td>活出精采的第二人生</td>
+                                    <td>
+                                        台積電慈善基金會 董事長<div class="schedule_name">張淑芬</div>
+                                        <div>對談主持人／今周刊數位內容部 總監兼總編輯 <span class="schedule_name">陳俍任</span></div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>10:25 - 10:45</th>
+                                    <td>休息與展攤交流</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3" class="schedule_title">精彩人生＆智慧照護</th>
+                                </tr>
+                                <tr>
+                                    <th>10:45 - 11:05</th>
+                                    <td>擁抱樂齡 健康長壽</td>
+                                    <td>新光醫院 家庭醫學科主治醫師<div class="schedule_name">胡念之</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>11:05 - 11:25</th>
+                                    <td>領航第五代健康地產</td>
+                                    <td>台灣房屋集團 總裁<div class="schedule_name">彭培業</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>11:25 - 11:45</th>
+                                    <td>好骨力，健康新「膝」望</td>
+                                    <td>博晟生醫 董事長<div class="schedule_name">陳德禮</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>11:45 - 12:05</th>
+                                    <td>精彩對談</td>
+                                    <td>
+                                        對談主持人／今周刊 發行人 <span class="schedule_name">梁永煌</span>
+                                        <div>與談人／上述講者</div>
+                                    </td>
+                                </tr>
+                                <tr class="half_line">
+                                    <th>12:05 - 13:40</th>
+                                    <td>中午用餐／展攤交流</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th>13:10- 13:40</th>
+                                    <td>來賓、讀者報到／展攤交流</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3" class="schedule_title">退休理財</th>
+                                </tr>
+                                <tr>
+                                    <th>13:40- 14:00</th>
+                                    <td>預立遺囑 讓愛傳遞</td>
+                                    <td>遺傳繼承法律專家<div class="schedule_name">劉韋德</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>14:00- 14:20</th>
+                                    <td>退休族幸福理財</td>
+                                    <td>中華民國退休基金協會 前理事長<div class="schedule_name">王儷玲</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>14:20- 14:40</th>
+                                    <td>精彩對談</td>
+                                    <td>
+                                        對談主持人／今周刊 發行人 <span class="schedule_name">梁永煌</span>
+                                        <div>與談人／上述講者</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>14:40- 15:00</th>
+                                    <td>休息與展攤交流</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="3" class="schedule_title">銀髮樂活</th>
+                                </tr>
+                                <tr>
+                                    <th>15:00- 15:20</th>
+                                    <td>有機生活，邁向銀閃閃健康道路</td>
+                                    <td>永豐餘生技 總經理<div class="schedule_name">何奕佳</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>15:20- 15:40</th>
+                                    <td>愛和陪伴 迎接人生下半場</td>
+                                    <td>知名作家<div class="schedule_name">吳若權</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>15:40- 16:00</th>
+                                    <td>熟齡追夢 從心啟程</td>
+                                    <td>熟齡遊學專家／郵輪旅遊達人<div class="schedule_name">豌豆老公主Amy</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>16:00- 16:20</th>
+                                    <td>精彩對談</td>
+                                    <td>
+                                        對談主持人／今周刊Podcast運營中心 總監<span class="schedule_name">潘怡靜</span>
+                                        <div>與談人／上述講者</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>16:20- 16:30</th>
+                                    <td>圓滿賦歸</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="schedule_btn">
+                        <div class="schedule_btn_box" @click="schedule_btn">{{scheduleIsopen?'CLOSE':'MORE'}}<img
+                                class="arrow_down" :style="{transform:scheduleIsopen?'rotate(180deg)':'rotate(0deg)'}"
+                                src="assets/images/arrow_down_pink.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 立即報名 -->
+            <div class="section section7">
+                <div class="container">
+                    <div class="title">立即報名</div>
+                    <div class="singup">
+                        <form action="">
+                            <div class="sign_top">
+                                <div class="sign_box">
+                                    <label for="" class="blue_text">報名場次</label>
+                                    <div class="sign_event" >
+                                        <div> <input type="radio" name="event" value="上午場" v-model="sign_event" required>上午場</div>
+                                        <div> <input type="radio" name="event" value="下午場" v-model="sign_event" required>下午場</div>
+                                        <div><input type="radio" name="event" value="全日參與" v-model="sign_event" required>全日參與</div>
+                                    </div>
+
+                                </div>
+                                <div class="sign_box">
+                                    <label for="name" class="blue_text">姓名</label>
+                                    <input type="text" id="name" v-model="sign_name" required>
+                                </div>
+                                <div class="sign_box">
+                                    <label for="phone" class="blue_text">手機</label>
+                                    <input type="text" id="phone" v-model="sign_phone" required>
+                                </div>
+                                <div class="sign_box">
+                                    <label for="email" class="blue_text">eamil</label>
+                                    <input type="text" id="email" v-model="sign_email" required>
+                                </div>
+                                <div class="sign_box">
+                                    <div class="blue_text"> <input type="checkbox" required v-model="sign_check">我同意個資蒐集</div>
+                                    <p>本人瞭解並同意主辦單位為日後之客戶管理、會員管理、統計分析、行銷等用途，得依個人資料保護法之規定蒐集、處理、利用本人所提供之個人資料，不得移作他用，並應對本人之個資做適當之安全維護措施
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="notice_text" :style="{display:noticeIsopen?'block':'none'}">
+                                注意事項: <br><br>
+                                1.本活動將全程直播，若報名者不克出席現場論壇，可透過觀看直播參與。預先完成報名資料填寫，可於直播進行時前往直播平台（今周刊Facebook、今周刊YouTube）聊天室簽到，請留下「全名
+                                手機末三碼」即完成簽到，範例：「王小明 207」。完成簽到者即具備抽獎資格，主辦單位將
+                                在活動結束後進行網路抽獎，一共抽出兩位獲獎人獲得精美好禮！<br><br>
+                                2.本活動免費參加，午餐敬請自理<br><br>
+                                3.標示*為必填欄位，請確實填寫<br><br>
+                                4.遇不可抗力、突發因素或防疫規定，主辦單位保留變更議程、活動規則、人數限制之資格審核權，活動前一周將以簡訊方式發送報到通知，以示您的出席資格<br><br>
+                                5.【個人資料隱私權保護聲明】
+                                「今周刊
+                                2023第七屆幸福熟齡臺日交流論壇」（下稱本活動）是由今周行銷股份有限公司（下稱本公司）所辦理。為確保您的個人資料隱私權，本公司暨本活動合作廠商（下稱蒐集單位）於業務處理過程中將會使用到您的部分個人資料。蒐集單位會妥善保護您提供的資料，並且依照約定使用個資。如有違反，願負擔一切民刑事法律責任。本公司依照個人資料保護法第8條之規定於蒐集您的個人資料時盡告知下列事項之義務。
+                                一、蒐集之目的：為進行客戶管理、會員管理、統計分析，寄發活動或產品行銷資訊，或依法律明文規定於必要時使用您的個人資料，蒐集單位透過填寫問卷或填寫訂購單或加入會員等方式蒐集您的個人資料。
+                                二、蒐集之個人資料類別：包括姓名、聯絡方式（電話、E-mail）、職業（公司、職稱）或家庭狀況等項，以您實際提供之資料為準。
+                                三、個人資料利用之期間、地區、對象及方式：
+                                期間：僅得於蒐集單位或業務所正常營運必須之保存期間。
+                                地區：蒐集單位所在國家及個人資料當事人聯絡地址所在國家。
+                                對象：提供蒐集單位之共同行銷、交互運用客戶資料公司、合作推廣單位、業務往來機構、會員管理之儲存、檢索查詢、列印等處理功能。
+                                方式：蒐集單位得就所蒐集之個人資料做以下之利用：寄送物品（寄送贈送之相關物品或文件給當事人）／行銷（寄發活動資訊、產品資訊等物給當事人）
+                            </div>
+                            <div class="notice_btn">
+                                <div class="notice_btn_box" @click="notice_btn">{{noticeIsopen?'顯示較少':'點擊查看注意事項'}} <img
+                                        class="arrow_down" src="assets/images/arrow_down_white.svg" alt=""
+                                        :style="{transform:noticeIsopen?'rotate(180deg)':'rotate(0deg)'}"></div>
+                            </div>
+<!-- 
+                            <div class="sign_btn">
+                                <div class="sign_btn_box" @click="sign_click">送出報名 <img class="arrow_down" src="assets/images/send.svg"
+                                        alt="">
+                                </div>
+                            </div> -->
+                            <div class="sign_btn">
+                                <div class="sign_btn_box">
+                                    <input @click="sign_click"  type="submit" value="送出報名"><img class="arrow_down" src="assets/images/send.svg" alt="">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <img class="dot2" src="assets/images/dot_2.png" alt="">
+            <img class="line3" src="assets/images/line_1.svg" alt="">
+        </div>
+
+        <!-- 活動資訊 -->
+        <div class="section section8">
+            <div class="container">
+                <div class="title">活動資訊</div>
+                <div class="information">
+                    <div class="information_left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+                        <div class="information_title">活動時間:</div>
+                        <div class="information_text">2023年10月11日(三) 09:00-16:30</div>
+
+                        <div class="information_title">活動地點:</div>
+                        <div class="information_text">格萊天漾大飯店 13樓格萊廳<br>（台北市萬華區艋舺大道101號）</div>
+
+                        <div class="information_title">大眾交通工具：</div>
+                        <div class="information_text">1.捷運龍山寺站2號出口出站，步行約5分鐘<br>2.萬華火車站出口出站，步行約1分鐘</div>
+
+                        <div class="information_title">自行開車：</div>
+                        <div class="information_text">國道一號25出口 [台北] 下交流道 → 重慶北路<br>
+                            → 右轉市民大道→ 左轉塔城街 → 接中華路<br>
+                            → 直行至艋舺大道</div>
+                    </div>
+                    <div class="information_right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+                        <div class="map">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7230.036365497534!2d121.50137300000002!3d25.033457000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9af74dc5381%3A0x321fb4825e85fb39!2z5qC86JCK5aSp5ry-5aSn6aOv5bqX!5e0!3m2!1szh-TW!2stw!4v1714704376414!5m2!1szh-TW!2stw"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="dot3" src="assets/images/dot_3.png" alt="">
+        </div>
+
+        <!-- 樂齡生活學 -->
+        <div class="section section9">
+            <div class="container">
+                <div class="title">樂齡生活學</div>
+            </div>
+            <div class="life">
+                <div class="page_slider_area">
+                    <div class="swiper mySwiper1">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/148935/DONG7403_0.jpg_1140x855.jpg"
+                                        alt="圖">
+                                    <p>勇敢求職吧，這世界比你想像更美好！中高齡重返職場，除了自己快樂、經濟獨立，也作回自己</p>
+                                    <div class="life_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/148935/DONG7403_0.jpg_1140x855.jpg"
+                                        alt="圖">
+                                    <p>勇敢求職吧，這世界比你想像更美好！中高齡重返職場，除了自己快樂、經濟獨立，也作回自己</p>
+                                    <div class="life_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/148935/DONG7403_0.jpg_1140x855.jpg"
+                                        alt="圖">
+                                    <p>勇敢求職吧，這世界比你想像更美好！中高齡重返職場，除了自己快樂、經濟獨立，也作回自己</p>
+                                    <div class="life_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/148935/DONG7403_0.jpg_1140x855.jpg"
+                                        alt="圖">
+                                    <p>勇敢求職吧，這世界比你想像更美好！中高齡重返職場，除了自己快樂、經濟獨立，也作回自己</p>
+                                    <div class="life_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- <div class="swiper-slide" v-for="item in life">
+                                <a href="" class="item_box" target="_blink">
+                                    <img :src="item.img"
+                                        alt="圖">
+                                    <p>{{item.text}}</p>
+                                    <div class="life_line">
+                                    </div>
+                                </a>
+                            </div> -->
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination1"></div>
+                    <div class="swiper-button-next swiper-button-next1"></div>
+                    <div class="swiper-button-prev swiper-button-prev1"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 精彩回顧 -->
+        <div class="section section10">
+            <div class="container">
+                <div class="title">精彩回顧</div>
+            </div>
+            <div class="review">
+                <div class="page_slider_area">
+                    <div class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="assets/images/pre-2018.jpg" alt="圖">
+                                    <p>2018</p>
+                                    <p style="font-weight: 700;">臺日交流論壇</p>
+                                    <div class="review_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="assets/images/pre-2019.jpg" alt="圖">
+                                    <p>2019</p>
+                                    <p style="font-weight: 700;">新照護關係</p>
+                                    <div class="review_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="assets/images/pre-2020.jpg" alt="圖">
+                                    <p>2020</p>
+                                    <p style="font-weight: 700;">放膽熟齡</p>
+                                    <div class="review_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="assets/images/pre-2021.jpg" alt="圖">
+                                    <p>2021</p>
+                                    <p style="font-weight: 700;">放膽熟齡</p>
+                                    <div class="review_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="assets/images/pre-2022.jpg" alt="圖">
+                                    <p>2022</p>
+                                    <p style="font-weight: 700;">熟齡破框 樂活人生</p>
+                                    <div class="review_line">
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="" class="item_box" target="_blink">
+                                    <img src="assets/images/pre-2023.jpg" alt="圖">
+                                    <p>2023</p>
+                                    <p style="font-weight: 700;">擁抱熟齡 幸福必修學分</p>
+                                    <div class="review_line">
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+                        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                    </div>
+                    <div class="swiper-pagination swiper-pagination2"></div>
+                    <div class="swiper-button-next swiper-button-next2"></div>
+                    <div class="swiper-button-prev swiper-button-prev2"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 贊助 -->
+        <div class="section section11">
+            <div class="container">
+                <div class="unit">
+                    <div class="unit_box">
+                        <div class="unit_title">主辦單位</div>
+                        <div class="unit_img">
+                            <a href="https://www.businesstoday.com.tw/" target="_blank">
+                                <img src="assets/images/logos/logo.svg" alt="">
+                            </a>
+                            <a href="https://thebetteraging.businesstoday.com.tw/" target="_blank" class="partner-logo">
+                                <img src="assets/images/logos/logo-thebetterage.svg" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="unit_box">
+                        <div class="unit_title">合作夥伴</div>
+                        <div class="unit_img">
+                            <a href="https://www.secom.com.tw/" target="_blank" class="high_logo">
+                                <img src="assets/images/logos/secom_2.svg" alt="中保科技">
+                            </a>
+                            <a href="https://www.yfy.com/tw/index.html" target="_blank" class="partner-logo YFY">
+                                <img src="assets/images/logos/YFY.svg" alt="永豐餘">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="unit_box">
+                        <div class="unit_title">響應夥伴</div>
+                        <div class="unit_img">
+                            <a href="https://www.twhg.com.tw/" target="_blank">
+                                <img src="assets/images/logos/twhg.png" alt="台灣房屋">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="unit_box">
+                        <div class="unit_title">推動夥伴</div>
+                        <div class="unit_img">
+                            <a href="https://www.biogend.com.tw/" target="_blank" class="partner-logo biogend">
+                                <img src="assets/images/logos/biogend.svg" alt="博晟生醫">
+                            </a>
+                            <a href="https://www.dradvice.com/" target="_blank" class="partner-logo dradvice">
+                                <img src="assets/images/logos/dradvice.svg" alt="健康力">
+                            </a>
+                            <a href="https://www.liontravel.com/category/zh-tw/index" target="_blank"
+                                class="partner-logo liontravel">
+                                <img src="assets/images/logos/liontravel.svg" alt="雄獅旅遊">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="unit_box">
+                        <div class="unit_title">媒體夥伴</div>
+                        <div class="unit_img">
+                            <a href="http://www.hitoradio.com/newweb/" target="_blank" class="high_logo">
+                                <img src="assets/images/logos/hitfm.svg" alt="Hit FM">
+                            </a>
+                            <a href="https://www.icrt.com.tw/" target="_blank" class="partner-logo iCRT">
+                                <img src="assets/images/logos/iCRT.svg" alt="ICRT">
+                            </a>
+                            <a href="http://www.pop917.com/home.aspx" target="_blank" class="partner-logo POPradio">
+                                <img src="assets/images/logos/POPradio.svg" alt="台北流行廣播電台">
+                            </a>
+                            <a href="https://www.csbc.com.tw/" target="_blank" class="partner-logo csbc">
+                                <img src="assets/images/logos/CS.svg" alt="正聲廣播 ">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>
+                服務電話：(02)2581-6196 #207/208/209/210 <br>
+                服務時間：週一至五 09:00~17:30 例假日除外
+            </p>
+            <p>
+                今周文化事業(股)公司 / 今周行銷(股)公司 / 今周出版(股)公司 版權所有 本網站圖文非經本社同意不得刊載<br>
+                Copyright © 2023 Business Today All rights reserved.
+            </p>
+        </footer>
+
+        <!-- fixed_right -->
+        <div class="fixed_right" :style="{opacity:isScroll?'1':'0'}">
+            <div class="fixed_line">
+                <a href="https://social-plugins.line.me/lineit/share?url=https://events.businesstoday.com.tw/2023/happiness_mature_age/"
+                    target="_blank">
+                    <img src="assets/images/logos/logo-line.svg" alt="">
+                </a>
+            </div>
+            <div class="fixed_go_top" @click="scrollTo('section1')">
+                <img src="assets/images/go-to-top.svg" alt="">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.4.21/dist/vue.global.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

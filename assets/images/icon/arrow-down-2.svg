@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="layout" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.3 14.24">
+<defs>
+<style>
+.cls-1{fill:none;stroke:#2a5987;stroke-linecap:round;stroke-miterlimit:10;stroke-width:1.75px;}
+</style>
+</defs>
+<polyline class="cls-1" points=".87 .87 9.65 7.07 18.43 .87"/>
+<polyline class="cls-1" points=".87 6.97 9.65 13.17 18.43 6.97"/>
+</svg>
