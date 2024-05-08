@@ -59,8 +59,9 @@ body {
   background-color: #64c0d6;
   z-index: -1;
 }
+
 /* preload */
-.preload{
+.preload {
   position: fixed;
   top: 0;
   left: 0;
@@ -68,18 +69,26 @@ body {
   height: 100vh;
   background-color: #ffcaca;
   z-index: 50;
-  animation: preloadAni 0.5s forwards;
+  animation: preloadAni 2s forwards;
+  -moz-animation: preloadAni 2s forwards;
+  -webkit-animation: preloadAni 2s forwards;
 }
-@keyframes preloadAni{
-  0%{
+
+@keyframes preloadAni {
+  0% {
     opacity: 1;
     z-index: 50;
   }
-  100%{
+  50% {
+    opacity: 1;
+    z-index: 50;
+  }
+  100% {
     opacity: 0;
     z-index: -10;
   }
 }
+
 /* navbar */
 .navbar {
   background-color: #e58383d7;
@@ -187,7 +196,11 @@ body {
   left: 0;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
   animation: line1 1.5s linear forwards;
-  animation-delay: 0.5s;
+  -moz-animation: line1 1.5s linear forwards;
+  -webkit-animation: line1 1.5s linear forwards;
+  animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
 }
 
 @keyframes line1 {
@@ -205,7 +218,13 @@ body {
   position: relative;
   top: 14vw;
   left: 20vw;
+  opacity: 0;
   animation: slogan1 1s linear forwards;
+  -moz-animation: slogan1 1s linear forwards;
+  -webkit-animation: slogan1 1s linear forwards;
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
 .slogan2 {
@@ -213,38 +232,52 @@ body {
   position: relative;
   top: 21.5vw;
   left: 16.5vw;
+  opacity: 0;
   animation: slogan2 1s linear forwards;
+  -moz-animation: slogan2 1s linear forwards;
+  -webkit-animation: slogan2 1s linear forwards;
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
-@keyframes slogan1{
-  0%{
+
+@keyframes slogan1 {
+  0% {
     opacity: 0;
     transform: translateX(-30px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateX(0px);
   }
 }
-@keyframes slogan2{
-  0%{
+
+@keyframes slogan2 {
+  0% {
     opacity: 0;
     transform: translateX(30px);
   }
-  100%{
+
+  100% {
     opacity: 1;
     transform: translateX(0px);
   }
 }
+
 .kv_logo {
   width: 9.5vw;
   height: 9.5vw;
   position: relative;
   top: 29vw;
   left: 33.5vw;
-  animation: zoomin 1s forwards;
-  transform: scale(0);
-  opacity: 0;
-  animation-delay: 0.5s;
+  /* opacity: 0; */
+  /* animation: zoomin 3s forwards;
+  -moz-animation: zoomin 3s forwards;
+  -webkit-animation: zoomin 3s forwards;
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s; */
 }
 
 .circle_line {
@@ -265,31 +298,24 @@ body {
   width: 8vw;
   top: 11vw;
   left: 7vw;
-  animation: in 3s forwards,square 3s linear infinite alternate;
-}
-
-@keyframes square {
-  0% {
-    transform: translateX(-10px);
-  }
-
-  100% {
-    transform: translateX(10px);
-  }
 }
 
 .flower1 {
   width: 6vw;
   top: 25.5vw;
   left: 8.5vw;
-  animation: in 3s forwards,flower1 40s linear infinite;
+  animation: flower1 40s linear infinite;
+  -moz-animation: flower1 40s linear infinite;
+  -webkit-animation: flower1 40s linear infinite;
 }
 
 .flower2 {
   width: 5vw;
   top: 8vw;
   left: 54vw;
-  animation: in 3s forwards,flower2 30s linear infinite;
+  animation: flower2 40s linear infinite;
+  -moz-animation: flower2 40s linear infinite;
+  -webkit-animation: flower2 40s linear infinite;
 }
 
 @keyframes flower1 {
@@ -329,7 +355,9 @@ body {
   top: 32vw;
   right: 40.5vw;
   rotate: -10deg;
-  animation: in 3s forwards,note 3s linear infinite alternate;
+  /* animation: in 3s forwards;
+  -moz-animation: in 3s forwards;
+  -webkit-animation: in 3s forwards; */
 }
 
 .note2 {
@@ -337,8 +365,6 @@ body {
   top: 11vw;
   right: 5.5vw;
   rotate: 10deg;
-  animation: in 3s forwards,note 3s linear infinite alternate;
-  animation-delay: -1s;
 }
 
 .note3 {
@@ -346,8 +372,6 @@ body {
   top: 8vw;
   right: 19vw;
   rotate: 15deg;
-  animation: in 3s forwards,note 2s linear infinite alternate;
-  animation-delay: -1.5s;
 }
 
 .note4 {
@@ -355,8 +379,6 @@ body {
   top: 36.5vw;
   right: 43.5vw;
   rotate: -15deg;
-  animation: in 3s forwards,note 2s linear infinite alternate;
-  animation-delay: -2s;
 }
 
 .people {
@@ -364,62 +386,39 @@ body {
   top: 11.5vw;
   right: 3vw;
   opacity: 0;
-  animation: in 1s forwards, people 5s linear infinite;
-  animation-delay: 1s,1.2s;
-}
-/* 
-@keyframes note {
-  0% {
-    rotate: -10deg;
-  }
-
-  100% {
-    rotate: 10deg;
-  }
-} */
-
-@keyframes people {
-  0% {
-    rotate: 0deg;
-  }
-
-  25% {
-    rotate: -3deg;
-  }
-
-  50% {
-    rotate: 0deg;
-  }
-
-  75% {
-    rotate: 3deg;
-  }
-
-  100% {
-    rotate: 0deg;
-  }
+  animation: in 3s forwards;
+  -moz-animation: in 3s forwards;
+  -webkit-animation: in 3s forwards;
+  animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  -webkit-animation-delay: 1s;
 }
 
-@keyframes in{
-  0%{
+
+
+@keyframes in {
+  0% {
     opacity: 0;
-    
   }
-  100%{
+
+  100% {
     opacity: 1;
   }
 }
-@keyframes zoomin{
-  0%{
+
+@keyframes zoomin {
+  0% {
     transform: scale(0);
     opacity: 0;
-    
+
   }
-  100%{
+
+  100% {
     transform: scale(1);
     opacity: 1;
   }
 }
+
 /* section2 */
 .section2 {
   background: linear-gradient(0deg, #d1ebf2 0%, #abd6e4 70%);
@@ -640,7 +639,7 @@ body {
   width: 60px;
   top: 1vw;
   left: -2.5vw;
- 
+
 }
 
 @keyframes yellow_squareMove {
@@ -652,6 +651,7 @@ body {
     transform: translateX(10px);
   }
 }
+
 .yellow_square2 {
   top: 2.5vw;
   left: -0.8vw;
@@ -828,7 +828,8 @@ body {
   z-index: 2;
   cursor: pointer;
 }
-.sign_btn_box input{
+
+.sign_btn_box input {
   background: transparent;
   border: none;
   color: #f29b9b;
@@ -1400,9 +1401,11 @@ footer p:nth-child(1) {
   transform: translateY(30px);
   transition: 0.3s;
 }
-.active .popup_content{
+
+.active .popup_content {
   transform: translateY(0);
 }
+
 .close_area {
   position: sticky;
   top: 0px;
@@ -1970,4 +1973,3 @@ footer p:nth-child(1) {
     height: 105%;
   }
 }
-
