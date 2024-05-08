@@ -79,7 +79,7 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  animation: upDown 2s linear infinite;
+  animation: preload_imgAni 0.5s infinite alternate;
 }
 @keyframes preloadAni {
   0% {
@@ -95,18 +95,12 @@ body {
     z-index: -10;
   }
 }
-@keyframes upDown{
+@keyframes preload_imgAni{
   0% {
-    top: 50%;
-  }
-  25% {
-    top: 40%;
-  }
-  75% {
-    top: 60%;
+    transform: translate(-50%,-50%) scale(1);
   }
   100% {
-    top: 50%;
+    transform: translate(-50%,-50%) scale(1.2);
   }
 }
 
@@ -413,9 +407,9 @@ body {
   top: 11.5vw;
   right: 3vw;
   opacity: 0;
-  animation: in 3s forwards;
-  -moz-animation: in 3s forwards;
-  -webkit-animation: in 3s forwards;
+  animation: in 2s forwards;
+  -moz-animation: in 2s forwards;
+  -webkit-animation: in 2s forwards;
   animation-delay: 1.7s;
   -moz-animation-delay: 1.7s;
   -webkit-animation-delay: 1.7s;
