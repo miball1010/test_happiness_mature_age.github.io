@@ -73,7 +73,14 @@ body {
   -moz-animation: preloadAni 2s forwards;
   -webkit-animation: preloadAni 2s forwards;
 }
-
+.preload_img{
+  position: absolute;
+  width: 5vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  animation: upDown 2s linear infinite;
+}
 @keyframes preloadAni {
   0% {
     opacity: 1;
@@ -86,6 +93,20 @@ body {
   100% {
     opacity: 0;
     z-index: -10;
+  }
+}
+@keyframes upDown{
+  0% {
+    top: 50%;
+  }
+  25% {
+    top: 40%;
+  }
+  75% {
+    top: 60%;
+  }
+  100% {
+    top: 50%;
   }
 }
 
@@ -219,9 +240,9 @@ body {
   top: 14vw;
   left: 20vw;
   opacity: 0;
-  animation: slogan1 1s linear forwards;
-  -moz-animation: slogan1 1s linear forwards;
-  -webkit-animation: slogan1 1s linear forwards;
+  animation: slogan1 1.5s linear forwards;
+  -moz-animation: slogan1 1.5s linear forwards;
+  -webkit-animation: slogan1 1.5s linear forwards;
   animation-delay: 1s;
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
@@ -233,9 +254,9 @@ body {
   top: 21.5vw;
   left: 16.5vw;
   opacity: 0;
-  animation: slogan2 1s linear forwards;
-  -moz-animation: slogan2 1s linear forwards;
-  -webkit-animation: slogan2 1s linear forwards;
+  animation: slogan2 1.5s linear forwards;
+  -moz-animation: slogan2 1.5s linear forwards;
+  -webkit-animation: slogan2 1.5s linear forwards;
   animation-delay: 1s;
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s;
@@ -271,13 +292,19 @@ body {
   position: relative;
   top: 29vw;
   left: 33.5vw;
-  /* opacity: 0; */
+  opacity: 0;
   /* animation: zoomin 3s forwards;
   -moz-animation: zoomin 3s forwards;
   -webkit-animation: zoomin 3s forwards;
   animation-delay: 1s;
   -moz-animation-delay: 1s;
   -webkit-animation-delay: 1s; */
+  animation: in 3s forwards;
+  -moz-animation: in 3s forwards;
+  -webkit-animation: in 3s forwards;
+  animation-delay: 1.5s;
+  -moz-animation-delay: 1.5s;
+  -webkit-animation-delay: 1.5s;
 }
 
 .circle_line {
@@ -389,9 +416,9 @@ body {
   animation: in 3s forwards;
   -moz-animation: in 3s forwards;
   -webkit-animation: in 3s forwards;
-  animation-delay: 1s;
-  -moz-animation-delay: 1s;
-  -webkit-animation-delay: 1s;
+  animation-delay: 1.7s;
+  -moz-animation-delay: 1.7s;
+  -webkit-animation-delay: 1.7s;
 }
 
 
