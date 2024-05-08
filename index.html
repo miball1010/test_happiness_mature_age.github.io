@@ -3,7 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="Shortcut Icon" href="https://www.businesstoday.com.tw/lazyweb/web/img/favicon.ico">
     <title>Document</title>
 
     <!--清cache -->
@@ -20,7 +21,7 @@
     <meta property="og:description"
         content="富足退休．活出精彩！ 《今周刊》第七屆幸福熟齡臺日交流論壇，邀請您10/11(三)前往格萊天漾大飯店 13樓格萊廳（台北市萬華區艋舺大道101號），一起快樂優雅地擁抱熟齡，為自己創造更多精彩的可能！特別企劃「熟齡夢想填答」線上進行中，完成填答，就有機會把千元好禮帶回家！論壇活動熱烈報名中，點擊連結了解更多>> ">
     <meta property="og:image"
-        content="https://events.businesstoday.com.tw/2023/happiness_mature_age/assets/images/og-image.jpg">
+        content="https://miball1010.github.io/test_happiness_mature_age.github.io/assets/images/og-image.jpg">
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
@@ -53,6 +54,10 @@
 
 <body>
     <div id="app">
+        <div class="preload">
+
+        </div>
+
         <div class="navbar">
             <div class="logo">
                 <a href="https://www.businesstoday.com.tw/" target="_blank"><img
@@ -88,12 +93,13 @@
             </div>
         </div>
 
+        <!-- 主視覺 -->
         <div class="section section1">
             <img class="dot1" src="assets/images/dot_1.png" alt="">
             <img class="line1" src="assets/images/line_1.svg" alt="">
-            <img class="slogan1" src="assets/images/slogan_1.png" alt="" > 
+            <img class="slogan1" src="assets/images/slogan_1.png" alt="">
             <img class="slogan2" src="assets/images/slogan_2.png" alt="">
-            <div class="kv_logo" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="300">
+            <div class="kv_logo">
                 <img class="circle_line" src="assets/images/circle_line.svg" alt="">
                 <img class="mature_logo" src="assets/images/logos/mature-age-logo.png" alt="">
             </div>
@@ -104,7 +110,7 @@
             <img class="note2" src="assets/images/note_2.svg" alt="">
             <img class="note3" src="assets/images/note_3.svg" alt="">
             <img class="note4" src="assets/images/note_4.svg" alt="">
-            <img class="people" src="assets/images/people.svg" alt="" data-aos="flip-left" data-aos-duration="1500" data-aos-delay="300">
+            <img class="people" src="assets/images/people.svg" alt="">
         </div>
 
         <!-- 活動直播 -->
@@ -168,7 +174,7 @@
                     <div class="yellow_square yellow_square3"></div>
                 </div>
                 <div class="other_speaker">
-                    <div class="speaker_box" v-for="item in speaker" data-aos="flip-left">
+                    <div class="speaker_box" v-for="item in speaker" data-aos="fade-up">
                         <div class="other_speaker_img"> <img :src="item.img" alt=""></div>
 
                         <div class="other_speaker_name">{{item.name}}</div>
@@ -389,10 +395,13 @@
                             <div class="sign_top">
                                 <div class="sign_box">
                                     <label for="" class="blue_text">報名場次</label>
-                                    <div class="sign_event" >
-                                        <div> <input type="radio" name="event" value="上午場" v-model="sign_event" required>上午場</div>
-                                        <div> <input type="radio" name="event" value="下午場" v-model="sign_event" required>下午場</div>
-                                        <div><input type="radio" name="event" value="全日參與" v-model="sign_event" required>全日參與</div>
+                                    <div class="sign_event">
+                                        <div> <input type="radio" name="event" value="上午場" v-model="sign_event"
+                                                required>上午場</div>
+                                        <div> <input type="radio" name="event" value="下午場" v-model="sign_event"
+                                                required>下午場</div>
+                                        <div><input type="radio" name="event" value="全日參與" v-model="sign_event"
+                                                required>全日參與</div>
                                     </div>
 
                                 </div>
@@ -409,7 +418,8 @@
                                     <input type="text" id="email" v-model="sign_email" required>
                                 </div>
                                 <div class="sign_box">
-                                    <div class="blue_text"> <input type="checkbox" required v-model="sign_check">我同意個資蒐集</div>
+                                    <div class="blue_text"> <input type="checkbox" required v-model="sign_check">我同意個資蒐集
+                                    </div>
                                     <p>本人瞭解並同意主辦單位為日後之客戶管理、會員管理、統計分析、行銷等用途，得依個人資料保護法之規定蒐集、處理、利用本人所提供之個人資料，不得移作他用，並應對本人之個資做適當之安全維護措施
                                     </p>
                                 </div>
@@ -438,7 +448,7 @@
                                         class="arrow_down" src="assets/images/arrow_down_white.svg" alt=""
                                         :style="{transform:noticeIsopen?'rotate(180deg)':'rotate(0deg)'}"></div>
                             </div>
-<!-- 
+                            <!-- 
                             <div class="sign_btn">
                                 <div class="sign_btn_box" @click="sign_click">送出報名 <img class="arrow_down" src="assets/images/send.svg"
                                         alt="">
@@ -446,7 +456,8 @@
                             </div> -->
                             <div class="sign_btn">
                                 <div class="sign_btn_box">
-                                    <input @click="sign_click"  type="submit" value="送出報名"><img class="arrow_down" src="assets/images/send.svg" alt="">
+                                    <input @click="sign_click" type="submit" value="送出報名"><img class="arrow_down"
+                                        src="assets/images/send.svg" alt="">
                                 </div>
                             </div>
                         </form>
@@ -463,7 +474,7 @@
             <div class="container">
                 <div class="title">活動資訊</div>
                 <div class="information">
-                    <div class="information_left" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="500">
+                    <div class="information_left" data-aos="fade-right" data-aos-duration="1500">
                         <div class="information_title">活動時間:</div>
                         <div class="information_text">2023年10月11日(三) 09:00-16:30</div>
 
@@ -478,7 +489,7 @@
                             → 右轉市民大道→ 左轉塔城街 → 接中華路<br>
                             → 直行至艋舺大道</div>
                     </div>
-                    <div class="information_right" data-aos="fade-left" data-aos-duration="1500" data-aos-delay="500">
+                    <div class="information_right" data-aos="fade-left" data-aos-duration="1500">
                         <div class="map">
                             <iframe
                                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7230.036365497534!2d121.50137300000002!3d25.033457000000002!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9af74dc5381%3A0x321fb4825e85fb39!2z5qC86JCK5aSp5ry-5aSn6aOv5bqX!5e0!3m2!1szh-TW!2stw!4v1714704376414!5m2!1szh-TW!2stw"

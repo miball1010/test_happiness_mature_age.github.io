@@ -59,7 +59,27 @@ body {
   background-color: #64c0d6;
   z-index: -1;
 }
-
+/* preload */
+.preload{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #ffcaca;
+  z-index: 50;
+  animation: preloadAni 0.5s forwards;
+}
+@keyframes preloadAni{
+  0%{
+    opacity: 1;
+    z-index: 50;
+  }
+  100%{
+    opacity: 0;
+    z-index: -10;
+  }
+}
 /* navbar */
 .navbar {
   background-color: #e58383d7;
@@ -165,7 +185,9 @@ body {
   width: 100%;
   top: 13vw;
   left: 0;
-  animation: line1 1.5s linear;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  animation: line1 1.5s linear forwards;
+  animation-delay: 0.5s;
 }
 
 @keyframes line1 {
@@ -184,7 +206,6 @@ body {
   top: 14vw;
   left: 20vw;
   animation: slogan1 1s linear forwards;
-  animation-delay: 500;
 }
 
 .slogan2 {
@@ -220,6 +241,10 @@ body {
   position: relative;
   top: 29vw;
   left: 33.5vw;
+  animation: zoomin 1s forwards;
+  transform: scale(0);
+  opacity: 0;
+  animation-delay: 0.5s;
 }
 
 .circle_line {
@@ -257,14 +282,14 @@ body {
   width: 6vw;
   top: 25.5vw;
   left: 8.5vw;
-  animation: in 0.5s forwards,flower1 40s linear infinite;
+  animation: in 3s forwards,flower1 40s linear infinite;
 }
 
 .flower2 {
   width: 5vw;
   top: 8vw;
   left: 54vw;
-  animation: in 0.5s forwards,flower2 30s linear infinite;
+  animation: in 3s forwards,flower2 30s linear infinite;
 }
 
 @keyframes flower1 {
@@ -304,7 +329,7 @@ body {
   top: 32vw;
   right: 40.5vw;
   rotate: -10deg;
-  animation: in 0.5s forwards,note 3s linear infinite alternate;
+  animation: in 3s forwards,note 3s linear infinite alternate;
 }
 
 .note2 {
@@ -312,7 +337,7 @@ body {
   top: 11vw;
   right: 5.5vw;
   rotate: 10deg;
-  animation: in 0.5s forwards,note 3s linear infinite alternate;
+  animation: in 3s forwards,note 3s linear infinite alternate;
   animation-delay: -1s;
 }
 
@@ -321,7 +346,7 @@ body {
   top: 8vw;
   right: 19vw;
   rotate: 15deg;
-  animation: in 0.5s forwards,note 2s linear infinite alternate;
+  animation: in 3s forwards,note 2s linear infinite alternate;
   animation-delay: -1.5s;
 }
 
@@ -330,7 +355,7 @@ body {
   top: 36.5vw;
   right: 43.5vw;
   rotate: -15deg;
-  animation: in 0.5s forwards,note 2s linear infinite alternate;
+  animation: in 3s forwards,note 2s linear infinite alternate;
   animation-delay: -2s;
 }
 
@@ -338,10 +363,11 @@ body {
   width: 36vw;
   top: 11.5vw;
   right: 3vw;
-  animation: people 5s linear infinite;
-  animation-delay: 1.5s;
+  opacity: 0;
+  animation: in 1s forwards, people 5s linear infinite;
+  animation-delay: 1s,1.2s;
 }
-
+/* 
 @keyframes note {
   0% {
     rotate: -10deg;
@@ -350,7 +376,7 @@ body {
   100% {
     rotate: 10deg;
   }
-}
+} */
 
 @keyframes people {
   0% {
@@ -371,15 +397,26 @@ body {
 
   100% {
     rotate: 0deg;
-    /* transform: translate(); */
   }
 }
+
 @keyframes in{
   0%{
     opacity: 0;
     
   }
   100%{
+    opacity: 1;
+  }
+}
+@keyframes zoomin{
+  0%{
+    transform: scale(0);
+    opacity: 0;
+    
+  }
+  100%{
+    transform: scale(1);
     opacity: 1;
   }
 }
