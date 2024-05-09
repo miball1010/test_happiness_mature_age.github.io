@@ -89,7 +89,8 @@
                         alt=""></a>
             </div>
             <div class="menu_btn" @click="menuIsopen=!menuIsopen">
-                <img src="assets/images/menu_btn.svg" alt="">
+                <img v-if="menuIsopen" src="assets/images/cross.svg" alt="">
+                <img v-else src="assets/images/menu_btn.svg" alt="">
             </div>
         </div>
 
@@ -403,22 +404,26 @@
                                         <div><input type="radio" name="event" value="全日參與" v-model="sign_event"
                                                 required>全日參與</div>
                                     </div>
-
                                 </div>
-                                <div class="sign_box">
+                                <div class="sign_box name">
                                     <label for="name" class="blue_text">姓名</label>
                                     <input type="text" id="name" v-model="sign_name" required>
+                                    <select v-model="sign_gender" id="gender" name="gender" id="gender" required>
+                                        <option value="先生">先生</option>
+                                        <option value="小姐">小姐</option>
+                                        <option value="其他">其他</option>
+                                    </select>
                                 </div>
                                 <div class="sign_box">
                                     <label for="phone" class="blue_text">手機</label>
-                                    <input type="text" id="phone" v-model="sign_phone" required>
+                                    <input type="text" id="phone" v-model="sign_phone" required placeholder="例:0912345678">
                                 </div>
                                 <div class="sign_box">
                                     <label for="email" class="blue_text">eamil</label>
-                                    <input type="text" id="email" v-model="sign_email" required>
+                                    <input type="text" id="email" v-model="sign_email" required placeholder="例:sample@gmail.com">
                                 </div>
                                 <div class="sign_box">
-                                    <div class="blue_text"> <input type="checkbox" required v-model="sign_check">我同意個資蒐集
+                                    <div class="blue_text"> <input type="checkbox" required v-model="sign_agree">我同意個資蒐集
                                     </div>
                                     <p>本人瞭解並同意主辦單位為日後之客戶管理、會員管理、統計分析、行銷等用途，得依個人資料保護法之規定蒐集、處理、利用本人所提供之個人資料，不得移作他用，並應對本人之個資做適當之安全維護措施
                                     </p>

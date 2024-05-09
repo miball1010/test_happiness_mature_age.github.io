@@ -1,6 +1,7 @@
 const { ref } = Vue
 const app = {
     setup() {
+        //抓資料
         const issue = ref([])
         const speaker = ref([])
         const life = ref([])
@@ -11,92 +12,71 @@ const app = {
                 speaker.value = data.speaker
                 life.value = data.life
             })
-        //sign
+
+        //報名
         let sign_event = ref('')
         let sign_name = ref('')
+        let sign_gender = ref('先生')
         let sign_phone = ref('')
         let sign_email = ref('')
-        let sign_check= ref('')
-    let emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        function sign_click() {
-            console.log(123)
-            if(sign_event.value == '' || sign_name.value == '' || sign_phone.value == '' || sign_email.value == '' || sign_check.value ==''){
-                
+        let sign_agree = ref('')
+        var mobileRegex = /^09\d{8}$/;
+        var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        function sign_click(event) {
+            if (sign_event.value == '' || sign_name.value == '' || sign_gender.value == '' || sign_phone.value == '' || sign_email.value == '' || sign_agree.value == '') {
+                // event.preventDefault()
             }
-            else{
-                alert(sign_event.value+' '+sign_name.value+' '+sign_phone.value+' '+sign_email.value)
+            else {
+                if (!mobileRegex.test(sign_phone.value)) {
+                    event.preventDefault()
+                    alert('手機號碼格式錯誤')
+
+                }
+                else if (!emailRegex.test(sign_email.value)) {
+                    event.preventDefault()
+                    alert('E-mail格式錯誤')
+                }
+                else {
+                    if (sign_agree.value) {
+                        sign_agree.value = 1
+                    }
+                    //alert(sign_event.value+' '+sign_name.value+' '+sign_gender.value+' '+sign_phone.value+' '+sign_email.value+' '+sign_agree.value)
+
+                    axios.post('https://events-cherry.businesstoday.com.tw/backend/happiness_mature_age_2023/sign_up', {
+                        Sign_up_type: sign_event.value,
+                        Name: sign_name.value,
+                        Gender: sign_gender.value,
+                        Cell_phone: sign_phone.value,
+                        Email: sign_email.value,
+                        Is_agree: sign_agree.value
+                    })
+                        .then((res) => {
+                            event.preventDefault()
+                            console.log(res.data);
+                            if(res.data.bIsSignUpSuccess==0){
+                                alert(res.data.sError)
+                            }
+                            else{
+                                alert("報名成功")
+                            }
+                         
+                        })
+                        .catch((error) => {
+                            event.preventDefault()
+                            console.log(error)
+                            alert("報名失敗，請重新試一次")
+                           
+                        })
+                }
             }
-            // if (sign_event.value == ''){
-            //     alert('請選擇參與時段')
-            // }
-            // if (sign_name.value == ''){
-            //     alert('請輸入姓名')
-            // }
-            // if (sign_phone.value == ''){
-            //     alert('請輸入手機號碼')
-            // }
-            // if (sign_email.value == ''){
-            //     alert('請輸入email')
-            // }
-            // if(sign_email.value != ''){
-            //     if (!emailRegex.test(sign_email.value)) {
-            //         alert('E-mail格式錯誤');
-            //         return false
-            //     }
-            // }
-           
-          
-            // axios.post('',{
-            //     event:sign_event,
-            //     name:sign_name,
-            //     phone:sign_phone,
-            //     email:sign_email
-            // })
-            // .then((res)=>{
-            //     console.log(res)
-            //     alert("報名成功")
-            // })
-            // .catch((error)=>{
-            //     alert("uf/3y94g4u ")
-            // })
-            
-        }
-
-        //speaker more
-        let img = ref('');
-        let name = ref('');
-        let company = ref('');
-        let title = ref('');
-        let alt = ref('');
-        let experience = ref('');
-        let time = ref('');
-        let speech_title = ref('');
-        let speech_subtitle = ref('');
-
-        const popupIsopen = ref(false)
-
-        function speaker_popup(index) {
-            img.value = speaker.value[index].img;
-            name.value = speaker.value[index].name;
-            company.value = speaker.value[index].company;
-            title.value = speaker.value[index].title;
-            alt.value = speaker.value[index].alt;
-            experience.value = speaker.value[index].experience;
-            time.value = speaker.value[index].time;
-            speech_title.value = speaker.value[index].speech_title;
-            speech_subtitle.value = speaker.value[index].speech_subtitle;
-
-            popupIsopen.value = true;
-            document.body.style.overflow = 'hidden'
-        }
-        function speaker_close() {
-            popupIsopen.value = false;
-            document.body.style.overflow = 'auto'
         }
 
         //滾動
         function scrollTo(section) {
             var position = document.querySelector(`.${section}`).offsetTop
+            if (window.innerWidth < 541) {
+                position -= 20
+            }
             menuIsopen.value = false
             if (section == 'section6' || section == 'section7') {
                 position += document.querySelector('.section_bg').offsetTop
@@ -105,7 +85,7 @@ const app = {
                 top: position,
                 behavior: 'smooth'
             })
-            console.log(position)
+            //console.log(position)
         }
 
         const isScroll = ref(false)
@@ -117,9 +97,14 @@ const app = {
             else {
                 isScroll.value = false
             }
-        });
-        //more btn
+        })
+
+        //利用T F 判斷按鈕是否被按
+        const menuIsopen = ref(false)
         const scheduleIsopen = ref(false)
+        const noticeIsopen = ref(false)
+        const popupIsopen = ref(false)
+
         function schedule_btn() {
             scheduleIsopen.value = !scheduleIsopen.value
             if (!scheduleIsopen.value) {
@@ -129,7 +114,7 @@ const app = {
                 })
             }
         }
-        const noticeIsopen = ref(false)
+       
         function notice_btn() {
             noticeIsopen.value = !noticeIsopen.value
             if (!noticeIsopen.value) {
@@ -145,9 +130,38 @@ const app = {
                 })
             }
         }
-        const menuIsopen = ref(false)
+        
+       let img = ref('');
+       let name = ref('');
+       let company = ref('');
+       let title = ref('');
+       let alt = ref('');
+       let experience = ref('');
+       let time = ref('');
+       let speech_title = ref('');
+       let speech_subtitle = ref('');
+
+       function speaker_popup(index) {
+           img.value = speaker.value[index].img;
+           name.value = speaker.value[index].name;
+           company.value = speaker.value[index].company;
+           title.value = speaker.value[index].title;
+           alt.value = speaker.value[index].alt;
+           experience.value = speaker.value[index].experience;
+           time.value = speaker.value[index].time;
+           speech_title.value = speaker.value[index].speech_title;
+           speech_subtitle.value = speaker.value[index].speech_subtitle;
+
+           popupIsopen.value = true;
+           document.body.style.overflow = 'hidden'
+       }
+       function speaker_close() {
+           popupIsopen.value = false;
+           document.body.style.overflow = 'auto'
+       }
+
         return {
-            sign_click, sign_event, sign_name, sign_phone, sign_email,sign_check,
+            sign_click, sign_event, sign_name, sign_gender, sign_phone, sign_email, sign_agree,
             scrollTo, isScroll,
             speaker_popup, img, name, company, title, alt, experience, time, speech_title, speech_subtitle, speaker_close, popupIsopen,
             schedule_btn, scheduleIsopen,
@@ -174,25 +188,21 @@ var swiper = new Swiper(".mySwiper1", {
         nextEl: ".swiper-button-next1",
         prevEl: ".swiper-button-prev1"
     },
-    /*autoplay: {
-    delay: 3000,
-    stopOnLastSlide: false,
-    disableOnInteraction: true,
-    },*/
+    autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+    },
     breakpoints: {
-        // when window width is >= 320px
         320: {
             slidesPerView: 1,
         },
-        // when window width is >= 480px
         480: {
             slidesPerView: 1,
         },
-        // when window width is >= 640px
         640: {
             slidesPerView: 2,
         },
-        // when window width is >= 1200px
         1200: {
             slidesPerView: 3,
         }
@@ -214,25 +224,21 @@ var swiper = new Swiper(".mySwiper2", {
         nextEl: ".swiper-button-next2",
         prevEl: ".swiper-button-prev2"
     },
-    /*autoplay: {
-    delay: 3000,
-    stopOnLastSlide: false,
-    disableOnInteraction: true,
-    },*/
+    autoplay: {
+        delay: 3000,
+        stopOnLastSlide: false,
+        disableOnInteraction: true,
+    },
     breakpoints: {
-        // when window width is >= 320px
         320: {
             slidesPerView: 1,
         },
-        // when window width is >= 480px
         480: {
             slidesPerView: 1,
         },
-        // when window width is >= 640px
         640: {
             slidesPerView: 2,
         },
-        // when window width is >= 1200px
         1200: {
             slidesPerView: 3,
         }

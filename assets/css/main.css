@@ -942,8 +942,14 @@ body {
   text-align: justify;
   color: #494949;
 }
-
-.sign_box:nth-child(2) input,
+.sign_box.name input{
+  width: 77%;
+  padding: 5px;
+}
+.sign_box.name select{
+  width: 22%;
+  padding: 5px;
+}
 .sign_box:nth-child(3) input,
 .sign_box:nth-child(4) input {
   width: 100%;
@@ -1582,7 +1588,6 @@ footer p:nth-child(1) {
     height: 100vh;
     background-color: #ffcaca;
     text-align: center;
-
     transition: 0.5s;
   }
 
@@ -1590,12 +1595,13 @@ footer p:nth-child(1) {
     display: block;
     padding: 20px;
     margin: 0;
-    color: white;
+    color: #494949;
     font-size: 1.2rem;
-    cursor: pointer;
     position: relative;
-    transition: 0.3s;
     border-bottom: 1px solid white;
+  }
+  .menu li:last-child{
+    border-bottom:none;
   }
 
   .menu li:hover {
@@ -1764,7 +1770,7 @@ footer p:nth-child(1) {
   }
 
   .section6>.container {
-    height: 100vw;
+    height: 100vw !important;
   }
 }
 
@@ -1992,5 +1998,20 @@ footer p:nth-child(1) {
     left: -5%;
     width: 110%;
     height: 105%;
+  }
+
+  @keyframes yellow_squareMove {
+    0% {
+      transform: translateX(0px);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  .section{
+    padding: 50px 0;
   }
 }
