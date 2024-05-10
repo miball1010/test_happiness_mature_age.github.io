@@ -181,7 +181,7 @@
                         <div class="other_speaker_name">{{item.name}}</div>
                         <div class="other_speaker_company">{{item.company}}</div>
                         <div class="other_speaker_title">{{item.title}}</div>
-                        <div class="other_speaker_btn" @click="speaker_popup(item.id-1)">MORE</div>
+                        <div class="other_speaker_btn" @click="speaker_popup(item.id)">MORE</div>
                     </div>
                 </div>
             </div>
@@ -225,7 +225,7 @@
         <div class="section_bg">
             <!-- 論壇議程 -->
             <div class="section section6">
-                <div class="container" :style="{height:scheduleIsopen?'auto':'50vw'}">
+                <div class="container" :class="{active:scheduleIsopen}">
                     <div class="title">論壇議程</div>
                     <div class="schedule_time">10/11 (三)</div>
                     <div class="schedule">
@@ -239,30 +239,30 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <th>08:30 - 09:00</th>
+                                    <th>08:30<br class="mb_br"> - <br class="mb_br">09:00</th>
                                     <td>來賓、讀者報到</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <th>09:00 - 09:03</th>
+                                    <th>09:00<br class="mb_br"> - <br class="mb_br">09:03</th>
                                     <td>主辦單位致詞</td>
                                     <td>今周刊 發行人 <div class="schedule_name">梁永煌</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>09:03 - 09:10</th>
+                                    <th>09:03<br class="mb_br"> - <br class="mb_br">09:10</th>
                                     <td>貴賓致詞</td>
                                     <td>勞動部<div>長官</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>09:10 - 09:45</th>
+                                    <th>09:10<br class="mb_br"> - <br class="mb_br">09:45</th>
                                     <td>活在長壽社會</td>
                                     <td>日本東京大學高齡社會綜合研究中心 客座教授<div class="schedule_name">秋山弘子</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>09:45- 10:25</th>
+                                    <th>09:45<br class="mb_br"> - <br class="mb_br">10:25</th>
                                     <td>活出精采的第二人生</td>
                                     <td>
                                         台積電慈善基金會 董事長<div class="schedule_name">張淑芬</div>
@@ -270,7 +270,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>10:25 - 10:45</th>
+                                    <th>10:25<br class="mb_br"> - <br class="mb_br">10:45</th>
                                     <td>休息與展攤交流</td>
                                     <td></td>
                                 </tr>
@@ -278,25 +278,25 @@
                                     <th colspan="3" class="schedule_title">精彩人生＆智慧照護</th>
                                 </tr>
                                 <tr>
-                                    <th>10:45 - 11:05</th>
+                                    <th>10:45<br class="mb_br"> - <br class="mb_br">11:05</th>
                                     <td>擁抱樂齡 健康長壽</td>
                                     <td>新光醫院 家庭醫學科主治醫師<div class="schedule_name">胡念之</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>11:05 - 11:25</th>
+                                    <th>11:05<br class="mb_br"> - <br class="mb_br">11:25</th>
                                     <td>領航第五代健康地產</td>
                                     <td>台灣房屋集團 總裁<div class="schedule_name">彭培業</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>11:25 - 11:45</th>
+                                    <th>11:25<br class="mb_br"> - <br class="mb_br">11:45</th>
                                     <td>好骨力，健康新「膝」望</td>
                                     <td>博晟生醫 董事長<div class="schedule_name">陳德禮</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>11:45 - 12:05</th>
+                                    <th>11:45<br class="mb_br"> - <br class="mb_br">12:05</th>
                                     <td>精彩對談</td>
                                     <td>
                                         對談主持人／今周刊 發行人 <span class="schedule_name">梁永煌</span>
@@ -304,12 +304,12 @@
                                     </td>
                                 </tr>
                                 <tr class="half_line">
-                                    <th>12:05 - 13:40</th>
+                                    <th>12:05<br class="mb_br"> - <br class="mb_br">13:40</th>
                                     <td>中午用餐／展攤交流</td>
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <th>13:10- 13:40</th>
+                                    <th>13:10<br class="mb_br"> - <br class="mb_br">13:40</th>
                                     <td>來賓、讀者報到／展攤交流</td>
                                     <td></td>
                                 </tr>
@@ -317,19 +317,19 @@
                                     <th colspan="3" class="schedule_title">退休理財</th>
                                 </tr>
                                 <tr>
-                                    <th>13:40- 14:00</th>
+                                    <th>13:40<br class="mb_br"> - <br class="mb_br">14:00</th>
                                     <td>預立遺囑 讓愛傳遞</td>
                                     <td>遺傳繼承法律專家<div class="schedule_name">劉韋德</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>14:00- 14:20</th>
+                                    <th>14:00<br class="mb_br"> - <br class="mb_br">14:20</th>
                                     <td>退休族幸福理財</td>
                                     <td>中華民國退休基金協會 前理事長<div class="schedule_name">王儷玲</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>14:20- 14:40</th>
+                                    <th>14:20<br class="mb_br"> - <br class="mb_br">14:40</th>
                                     <td>精彩對談</td>
                                     <td>
                                         對談主持人／今周刊 發行人 <span class="schedule_name">梁永煌</span>
@@ -337,7 +337,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>14:40- 15:00</th>
+                                    <th>14:40<br class="mb_br"> - <br class="mb_br">15:00</th>
                                     <td>休息與展攤交流</td>
                                     <td></td>
                                 </tr>
@@ -345,25 +345,25 @@
                                     <th colspan="3" class="schedule_title">銀髮樂活</th>
                                 </tr>
                                 <tr>
-                                    <th>15:00- 15:20</th>
+                                    <th>15:00<br class="mb_br"> - <br class="mb_br">15:20</th>
                                     <td>有機生活，邁向銀閃閃健康道路</td>
                                     <td>永豐餘生技 總經理<div class="schedule_name">何奕佳</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>15:20- 15:40</th>
+                                    <th>15:20<br class="mb_br"> - <br class="mb_br">15:40</th>
                                     <td>愛和陪伴 迎接人生下半場</td>
                                     <td>知名作家<div class="schedule_name">吳若權</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>15:40- 16:00</th>
+                                    <th>15:40<br class="mb_br"> - <br class="mb_br">16:00</th>
                                     <td>熟齡追夢 從心啟程</td>
                                     <td>熟齡遊學專家／郵輪旅遊達人<div class="schedule_name">豌豆老公主Amy</div>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>16:00- 16:20</th>
+                                    <th>16:00<br class="mb_br"> - <br class="mb_br">16:20</th>
                                     <td>精彩對談</td>
                                     <td>
                                         對談主持人／今周刊Podcast運營中心 總監<span class="schedule_name">潘怡靜</span>
@@ -371,7 +371,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>16:20- 16:30</th>
+                                    <th>16:20<br class="mb_br"> - <br class="mb_br">16:30</th>
                                     <td>圓滿賦歸</td>
                                     <td></td>
                                 </tr>

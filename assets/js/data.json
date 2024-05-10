@@ -44,17 +44,17 @@
             "speech_title": "精彩人生＆智慧照護",
             "speech_subtitle": "領航第五代健康地產"
         }, {
-            "id":1,
+            "id":5,
             "name": "胡念之",
             "img": "assets/images/speakers/speaker-9.jpg",
-            "company":"新光醫院家庭醫",
+            "company":"新光醫院家庭醫5",
             "title": "學科主治醫師",
             "experience": "經歷：<br>新光醫院家庭醫學科主治醫師<br><br>學歷：<br>台灣大學公共衛生學院職業醫學與工業衛生研究所碩士<br>高雄醫學大學醫學院醫學士專科<br><br>證書：<br>台灣家庭醫學專科醫師<br>台灣職業醫學專科醫師<br>台灣安寧緩和醫學專科醫師",
             "time": "10:45 am- 11:05 am",
             "speech_title": "精彩人生＆智慧照護",
             "speech_subtitle": "擁抱樂齡 健康長壽"
         },{
-            "id":2,
+            "id":4,
             "name": "彭培業",
             "img": "assets/images/speakers/speaker-3.jpg",
             "company":"台灣房屋集團",
@@ -64,7 +64,7 @@
             "speech_title": "精彩人生＆智慧照護",
             "speech_subtitle": "領航第五代健康地產"
         }, {
-            "id":1,
+            "id":3,
             "name": "胡念之",
             "img": "assets/images/speakers/speaker-9.jpg",
             "company":"新光醫院家庭醫",

@@ -1,4 +1,8 @@
 /* ////////////////// */
+#app{
+  width: 100%;
+  overflow-x: hidden;
+}
 body {
   background: #f9f9f9;
   font-size: 16px;
@@ -762,6 +766,9 @@ body {
   height: 50vw;
   justify-content: start;
 }
+.section6>.container.active{
+  height: auto;
+}
 
 .section6>.container::before {
   content: '';
@@ -899,7 +906,9 @@ body {
   top: 5px;
   position: relative;
 }
-
+.mb_br{
+  display: none;
+}
 /* section7 */
 
 .section7 .container {
@@ -1548,7 +1557,17 @@ footer p:nth-child(1) {
   top: 50%;
   transform: translateY(-50%);
 }
-
+@media(max-width:1370px){
+  .swiper-button-prev {
+    left: -3%;
+    transform: scale(1.5);
+  }
+  
+  .swiper-button-next {
+    right: -3%;
+    transform: scale(-1.5);
+  }
+}
 @media(max-width:1300px) {
 
   .issue {
@@ -1768,9 +1787,14 @@ footer p:nth-child(1) {
     right: -4%;
     transform: scale(-0.9);
   }
-
+  .swiper-button-prev:hover{
+    transform: scale(1.2);
+  }
+  .swiper-button-next:hover{
+    transform: scale(-1.2);
+  }
   .section6>.container {
-    height: 100vw !important;
+    height: 100vw;
   }
 }
 
@@ -2013,5 +2037,11 @@ footer p:nth-child(1) {
   }
   .section{
     padding: 50px 0;
+  }
+  .schedule table {
+    font-size: 0.8rem;
+  }
+  .mb_br{
+    display: block;
   }
 }

@@ -53,19 +53,19 @@ const app = {
                         .then((res) => {
                             event.preventDefault()
                             console.log(res.data);
-                            if(res.data.bIsSignUpSuccess==0){
+                            if (res.data.bIsSignUpSuccess == 0) {
                                 alert(res.data.sError)
                             }
-                            else{
+                            else {
                                 alert("報名成功")
                             }
-                         
+
                         })
                         .catch((error) => {
                             event.preventDefault()
                             console.log(error)
                             alert("報名失敗，請重新試一次")
-                           
+
                         })
                 }
             }
@@ -114,7 +114,7 @@ const app = {
                 })
             }
         }
-       
+
         function notice_btn() {
             noticeIsopen.value = !noticeIsopen.value
             if (!noticeIsopen.value) {
@@ -130,35 +130,37 @@ const app = {
                 })
             }
         }
-        
-       let img = ref('');
-       let name = ref('');
-       let company = ref('');
-       let title = ref('');
-       let alt = ref('');
-       let experience = ref('');
-       let time = ref('');
-       let speech_title = ref('');
-       let speech_subtitle = ref('');
 
-       function speaker_popup(index) {
-           img.value = speaker.value[index].img;
-           name.value = speaker.value[index].name;
-           company.value = speaker.value[index].company;
-           title.value = speaker.value[index].title;
-           alt.value = speaker.value[index].alt;
-           experience.value = speaker.value[index].experience;
-           time.value = speaker.value[index].time;
-           speech_title.value = speaker.value[index].speech_title;
-           speech_subtitle.value = speaker.value[index].speech_subtitle;
+        let img = ref('');
+        let name = ref('');
+        let company = ref('');
+        let title = ref('');
+        let alt = ref('');
+        let experience = ref('');
+        let time = ref('');
+        let speech_title = ref('');
+        let speech_subtitle = ref('');
 
-           popupIsopen.value = true;
-           document.body.style.overflow = 'hidden'
-       }
-       function speaker_close() {
-           popupIsopen.value = false;
-           document.body.style.overflow = 'auto'
-       }
+        function speaker_popup(id) {
+            let nowSpeaker = speaker.value.find(speaker => speaker.id === id);
+console.log(id)
+            img.value = nowSpeaker.img;
+            name.value = nowSpeaker.name;
+            company.value = nowSpeaker.company;
+            title.value = nowSpeaker.title;
+            alt.value = nowSpeaker.alt;
+            experience.value = nowSpeaker.experience;
+            time.value = nowSpeaker.time;
+            speech_title.value = nowSpeaker.speech_title;
+            speech_subtitle.value = nowSpeaker.speech_subtitle;
+
+            popupIsopen.value = true;
+            document.body.style.overflow = 'hidden'
+        }
+        function speaker_close() {
+            popupIsopen.value = false;
+            document.body.style.overflow = 'auto'
+        }
 
         return {
             sign_click, sign_event, sign_name, sign_gender, sign_phone, sign_email, sign_agree,
