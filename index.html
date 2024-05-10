@@ -174,6 +174,25 @@
                     <div class="yellow_square yellow_square2"></div>
                     <div class="yellow_square yellow_square3"></div>
                 </div>
+                <div class="main_speaker" data-aos="fade-up">
+                    <div class="speaker_left">
+                        <img src="assets/images/speakers/speaker-2.jpg" alt="">
+                    </div>
+
+                    <div class="speaker_right">
+                        <div class="speaker_name">張淑芬</div>
+                        <div class="speaker_company">台積電慈善基金會</div>
+                        <div class="speaker_title">董事長</div>
+                        <div class="speaker_experience">
+                            張淑芬董事長擔任台積電慈善基金會董事長，台積電文教基金會董事、偉儀社會福利慈善基金會董事長及現代婦女基金會董事，為藝術與慈善界中極具聲望的意見領袖，獲選港澳台愛心獎得主及台灣知名雜誌Taiwan
+                            Tatler百大影響人物，著有《我的成長—真心》、《畫架上的進行式》、《引路》等書。<br><br>
+                            張淑芬女士關注照顧獨老、推廣孝道等公益事務，同時亦熱心參與關懷弱勢、保護環境、藝術及文化等議題，近來其亦致力於技職培力計畫的推廣，幫助台灣偏鄉學童學習一技之長，並號召「一萬一戶．把愛傳出」專案資助社會邊緣戶，喚起人與人之間彼此關懷的溫暖。
+                        </div>
+                    </div>
+                    <div class="yellow_square yellow_square1"></div>
+                    <div class="yellow_square yellow_square2"></div>
+                    <div class="yellow_square yellow_square3"></div>
+                </div>
                 <div class="other_speaker">
                     <div class="speaker_box" v-for="item in speaker" data-aos="fade-up">
                         <div class="other_speaker_img"> <img :src="item.img" alt=""></div>
@@ -416,11 +435,13 @@
                                 </div>
                                 <div class="sign_box">
                                     <label for="phone" class="blue_text">手機</label>
-                                    <input type="text" id="phone" v-model="sign_phone" required placeholder="例:0912345678">
+                                    <input type="text" id="phone" v-model="sign_phone" required
+                                        placeholder="例:0912345678">
                                 </div>
                                 <div class="sign_box">
                                     <label for="email" class="blue_text">eamil</label>
-                                    <input type="text" id="email" v-model="sign_email" required placeholder="例:sample@gmail.com">
+                                    <input type="text" id="email" v-model="sign_email" required
+                                        placeholder="例:sample@gmail.com">
                                 </div>
                                 <div class="sign_box">
                                     <div class="blue_text"> <input type="checkbox" required v-model="sign_agree">我同意個資蒐集

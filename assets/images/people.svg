@@ -3,9 +3,9 @@
   <defs>
     <style>
      #people{
-     animation: people 5s linear infinite;
-  -moz-animation: people 5s linear infinite;
-  -webkit-animation: people 5s linear infinite;
+     animation: people 3s linear infinite;
+  -moz-animation: people 3s linear infinite;
+  -webkit-animation: people 3s linear infinite;
   animation-delay: 1.2s;
   -moz-animation-delay: 1.2s;
   -webkit-animation-delay: 1.2s;
@@ -78,9 +78,9 @@
     .cls-10 {
   fill: #f29b9b;
   transform: translate(0px, -4px);
-  animation: move 5s linear infinite;
-  -moz-animation: move 5s linear infinite;
-  -webkit-animation: move 5s linear infinite;
+  animation: move 3s linear infinite;
+  -moz-animation: move 3s linear infinite;
+  -webkit-animation: move 3s linear infinite;
   animation-delay: 1.5s;
   -moz-animation-delay: 1.5s;
   -webkit-animation-delay: 1.5s;
