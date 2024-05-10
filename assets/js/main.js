@@ -37,9 +37,6 @@ const app = {
                     alert('E-mail格式錯誤')
                 }
                 else {
-                    if (sign_agree.value) {
-                        sign_agree.value = 1
-                    }
                     //alert(sign_event.value+' '+sign_name.value+' '+sign_gender.value+' '+sign_phone.value+' '+sign_email.value+' '+sign_agree.value)
 
                     axios.post('https://events-cherry.businesstoday.com.tw/backend/happiness_mature_age_2023/sign_up', {
@@ -48,7 +45,7 @@ const app = {
                         Gender: sign_gender.value,
                         Cell_phone: sign_phone.value,
                         Email: sign_email.value,
-                        Is_agree: sign_agree.value
+                        Is_agree: 1
                     })
                         .then((res) => {
                             event.preventDefault()
@@ -143,7 +140,7 @@ const app = {
 
         function speaker_popup(id) {
             let nowSpeaker = speaker.value.find(speaker => speaker.id === id);
-console.log(id)
+            console.log(id)
             img.value = nowSpeaker.img;
             name.value = nowSpeaker.name;
             company.value = nowSpeaker.company;

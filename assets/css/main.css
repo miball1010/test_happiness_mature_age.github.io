@@ -856,6 +856,9 @@ body {
   padding: 0.5rem 1rem 0.5rem 1.2rem;
   z-index: 2;
   cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 1rem;
 }
 
 .sign_btn_box input {
