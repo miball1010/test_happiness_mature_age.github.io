@@ -913,6 +913,75 @@ body {
 .mb_br{
   display: none;
 }
+
+.sign_popup {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  opacity: 0;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.sign_popup.active {
+  opacity: 1;
+  z-index: 30;
+}
+
+.sign_popup_bg {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #352a29c3;
+}
+
+.sign_popup_content {
+  background-color: #fff;
+  max-width: 960px;
+  width: 85vw;
+  color: #494949;
+  position: relative;
+  border-radius: 0.7rem;
+  max-height: 80%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  transform: translateY(30px);
+  transition: 0.3s;
+}
+
+.active .sign_popup_content {
+  transform: translateY(0);
+}
+
+.close_area {
+  position: sticky;
+  top: 0px;
+  z-index: 5;
+}
+
+.popup_close {
+  position: absolute;
+  font-size: 2rem;
+  right: 10px;
+  top: 0px;
+  cursor: pointer;
+  font-weight: 900;
+}
+
+.popup_close:hover {
+  color: #64c0d6;
+}
+
+.signpopup_top {
+  margin-bottom: 2rem;
+  padding: 100px 30px;
+  text-align: center;
+
+}
 /* section7 */
 
 .section7 .container {
@@ -1340,8 +1409,7 @@ body {
   transition: 0.3s;
 }
 .unit_img a:hover{
-  opacity: 0.7;
-  transform: scale(1.1) rotate(10deg);
+  transform: scale(1.1);
 }
 .unit_img img {
   height: 100%;
@@ -1463,18 +1531,6 @@ footer p:nth-child(1) {
   top: 0px;
   cursor: pointer;
   font-weight: 900;
-}
-
-.hihi {
-  background-color: #fff;
-  max-width: 960px;
-  width: 85vw;
-  color: #494949;
-  position: relative;
-  border-radius: 0.7rem;
-  max-height: 80%;
-  overflow-x: hidden;
-  overflow-y: auto;
 }
 
 .popup_close:hover {

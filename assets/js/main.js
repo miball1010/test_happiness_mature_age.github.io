@@ -22,6 +22,8 @@ const app = {
         let sign_agree = ref('')
         var mobileRegex = /^09\d{8}$/;
         var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        const signpopupIsopen = ref(false)
+
         function sign_click(event) {
             if (sign_event.value == '' || sign_name.value == '' || sign_gender.value == '' || sign_phone.value == '' || sign_email.value == '' || sign_agree.value == '') {
                 // event.preventDefault()
@@ -37,6 +39,8 @@ const app = {
                     alert('E-mail格式錯誤')
                 }
                 else {
+                    event.preventDefault()
+
                     //alert(sign_event.value+' '+sign_name.value+' '+sign_gender.value+' '+sign_phone.value+' '+sign_email.value+' '+sign_agree.value)
 
                     axios.post('https://events-cherry.businesstoday.com.tw/backend/happiness_mature_age_2023/sign_up', {
@@ -48,24 +52,28 @@ const app = {
                         Is_agree: 1
                     })
                         .then((res) => {
-                            event.preventDefault()
                             console.log(res.data);
                             if (res.data.bIsSignUpSuccess == 0) {
                                 alert(res.data.sError)
                             }
                             else {
-                                alert("報名成功")
+                                signpopupIsopen.value = true
+                                console.log(signpopupIsopen.value)
                             }
 
                         })
                         .catch((error) => {
-                            event.preventDefault()
                             console.log(error)
                             alert("報名失敗，請重新試一次")
 
                         })
                 }
             }
+        }
+
+        function sign_close() {
+            signpopupIsopen.value = false
+            location.href = "./index.html"
         }
 
         //滾動
@@ -160,7 +168,7 @@ const app = {
         }
 
         return {
-            sign_click, sign_event, sign_name, sign_gender, sign_phone, sign_email, sign_agree,
+            sign_click, sign_event, sign_name, sign_gender, sign_phone, sign_email, sign_agree, signpopupIsopen, sign_close,
             scrollTo, isScroll,
             speaker_popup, img, name, company, title, alt, experience, time, speech_title, speech_subtitle, speaker_close, popupIsopen,
             schedule_btn, scheduleIsopen,

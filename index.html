@@ -426,7 +426,7 @@
                                 </div>
                                 <div class="sign_box name">
                                     <label for="name" class="blue_text">姓名</label>
-                                    <input type="text" id="name" v-model="sign_name" required>
+                                    <input type="text" id="name" v-model="sign_name" required maxlength="30">
                                     <select v-model="sign_gender" id="gender" name="gender" id="gender" required>
                                         <option value="先生">先生</option>
                                         <option value="小姐">小姐</option>
@@ -436,7 +436,7 @@
                                 <div class="sign_box">
                                     <label for="phone" class="blue_text">手機</label>
                                     <input type="text" id="phone" v-model="sign_phone" required
-                                        placeholder="例:0912345678">
+                                        placeholder="例:0912345678" maxlength="10">
                                 </div>
                                 <div class="sign_box">
                                     <label for="email" class="blue_text">eamil</label>
@@ -474,9 +474,10 @@
                                         class="arrow_down" src="assets/images/arrow_down_white.svg" alt=""
                                         :style="{transform:noticeIsopen?'rotate(180deg)':'rotate(0deg)'}"></div>
                             </div>
-                            
+
                             <div class="sign_btn">
-                                    <button class="sign_btn_box" @click="sign_click" type="submit">送出報名<img class="arrow_down" src="assets/images/send.svg" alt=""></button>
+                                <button class="sign_btn_box" @click="sign_click" type="submit">送出報名<img
+                                        class="arrow_down" src="assets/images/send.svg" alt=""></button>
                             </div>
                             <!-- <div class="sign_btn">
                                 <div class="sign_btn_box">
@@ -489,6 +490,19 @@
                 </div>
             </div>
 
+            <div class="sign_popup" :class="{active:signpopupIsopen}">
+                <div class="sign_popup_bg">
+                    <div class="sign_popup_content">
+                        <div class="close_area">
+                            <div class="popup_close" @click="sign_close">×</div>
+                        </div>
+                        <div class="signpopup_top">
+                            <h3>報名資料送出成功</h3><br>
+                            <p>感謝填寫！主辦單位將於活動前一周，以簡訊方式通知報名結果並發送報到序號，以示您的出席資格</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <img class="dot2" src="assets/images/dot_2.png" alt="">
             <img class="line3" src="assets/images/line_1.svg" alt="">
         </div>
