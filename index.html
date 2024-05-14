@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <link rel="Shortcut Icon" href="https://www.businesstoday.com.tw/lazyweb/web/img/favicon.ico">
-    <title>夢想 • 富足  熟齡生活提案</title>
+    <title>夢想 • 富足 熟齡生活提案</title>
 
     <!--清cache -->
     <meta http-equiv="pragma" content="no-cache" />
@@ -27,14 +27,9 @@
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="assets/css/main.css?20240506">
 
-
-    <!-- js -->
-
     <!-- AOS -->
     <link href="assets/css/aos.css" rel="stylesheet">
     <script src="assets/js/aos.js"></script>
-
-    <!-- swiper -->
 
     <!-- 字體 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,14 +44,15 @@
         gtag('js', new Date());
         gtag('config', 'G-E8H9YJZQJP');
     </script>
-
 </head>
 
 <body>
     <div id="app">
+
         <div class="preload">
             <img class="preload_img" src="assets/images/note_2.svg" alt="">
         </div>
+
         <div class="navbar">
             <div class="logo">
                 <a href="https://www.businesstoday.com.tw/" target="_blank"><img
@@ -238,7 +234,6 @@
                 </div>
             </div>
         </div>
-
 
         <div class="section_bg">
             <!-- 論壇議程 -->
@@ -548,51 +543,14 @@
                 <div class="page_slider_area">
                     <div class="swiper mySwiper1">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                            <div class="swiper-slide" v-for="item in life">
                                 <a href="" class="item_box" target="_blink">
-                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/148935/DONG7403_0.jpg_1140x855.jpg"
-                                        alt="圖">
-                                    <p>勇敢求職吧，這世界比你想像更美好！中高齡重返職場，除了自己快樂、經濟獨立，也作回自己</p>
-                                    <div class="life_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/147614/300076163_2693929430737098_7786828092539945922_n1.jpg_1140x855.jpg"
-                                        alt="圖">
-                                    <p>他罹癌、戴助聽器，仍勇闖日本打工換宿！76歲爺離開舒適圈、體驗不同生活：能工作是幸福的事</p>
-                                    <div class="life_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/144811/01.jpg_1140x855.jpg"
-                                        alt="圖">
-                                        <p>太肥太油不准吃，9旬父怨「活著還有啥意思？」丁菱娟：改變觀念陪爸媽終老，用他喜歡方式表達愛</p>
-                                    <div class="life_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="https://doqvf81n9htmm.cloudfront.net/data/crop_article/146315/16Shutterstock_2223026981.jpg_1140x855.jpg"
-                                        alt="圖">
-                                        <p>「家產都分了還吵不停！」富爸怒撤銷贈與，竟被兒告上法庭…會計師教財富傳承：先照顧好自己</p>
-                                    <div class="life_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- <div class="swiper-slide" v-for="item in life">
-                                <a href="" class="item_box" target="_blink">
-                                    <img :src="item.img"
-                                        alt="圖">
+                                    <img :src="item.img" alt="圖">
                                     <p>{{item.text}}</p>
                                     <div class="life_line">
                                     </div>
                                 </a>
-                            </div> -->
+                            </div>
                         </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>
@@ -612,61 +570,15 @@
                 <div class="page_slider_area">
                     <div class="swiper mySwiper2">
                         <div class="swiper-wrapper">
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="assets/images/pre-2018.jpg" alt="圖">
-                                    <p>2018</p>
-                                    <p style="font-weight: 700;">臺日交流論壇</p>
+                            <div class="swiper-slide" v-for="item in review" :key="item.img">
+                                <a :href="item.url" class="item_box" target="_blink">
+                                    <img :src="item.img" :alt="item.alt">
+                                    <p>{{item.year}}</p>
+                                    <p style="font-weight: 700;">{{item.title}}</p>
                                     <div class="review_line">
                                     </div>
                                 </a>
                             </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="assets/images/pre-2019.jpg" alt="圖">
-                                    <p>2019</p>
-                                    <p style="font-weight: 700;">新照護關係</p>
-                                    <div class="review_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="assets/images/pre-2020.jpg" alt="圖">
-                                    <p>2020</p>
-                                    <p style="font-weight: 700;">放膽熟齡</p>
-                                    <div class="review_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="assets/images/pre-2021.jpg" alt="圖">
-                                    <p>2021</p>
-                                    <p style="font-weight: 700;">放膽熟齡</p>
-                                    <div class="review_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="assets/images/pre-2022.jpg" alt="圖">
-                                    <p>2022</p>
-                                    <p style="font-weight: 700;">熟齡破框 樂活人生</p>
-                                    <div class="review_line">
-                                    </div>
-                                </a>
-                            </div>
-                            <div class="swiper-slide">
-                                <a href="" class="item_box" target="_blink">
-                                    <img src="assets/images/pre-2023.jpg" alt="圖">
-                                    <p>2023</p>
-                                    <p style="font-weight: 700;">擁抱熟齡 幸福必修學分</p>
-                                    <div class="review_line">
-                                    </div>
-                                </a>
-                            </div>
-
                         </div>
                         <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
                     </div>

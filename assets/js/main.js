@@ -1,17 +1,100 @@
-const { ref } = Vue
+const { ref,onMounted,nextTick } = Vue
 const app = {
     setup() {
         //抓資料
         const issue = ref([])
         const speaker = ref([])
         const life = ref([])
-        fetch('assets/js/data.json')
+        const review=ref([])
+
+        let swiper1=null
+        let swiper2=null
+
+        onMounted(()=>{
+
+            fetch('assets/js/data.json')
             .then(res => res.json())
             .then(data => {
                 issue.value = data.issue
                 speaker.value = data.speaker
                 life.value = data.life
+                review.value=data.review
+
+                nextTick(()=>{
+                    swiper1 = new Swiper(".mySwiper1", {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                        slidesPerGroup: 1,
+                        loop: true,
+                        loopFillGroupWithBlank: true,
+                        autoplay: true,
+                        pagination: {
+                            el: ".swiper-pagination1",
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next1",
+                            prevEl: ".swiper-button-prev1"
+                        },
+                        autoplay: {
+                            delay: 3000,
+                            stopOnLastSlide: false,
+                            disableOnInteraction: true,
+                        },
+                        breakpoints: {
+                            320: {
+                                slidesPerView: 1,
+                            },
+                            480: {
+                                slidesPerView: 1,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                            }
+                        }
+                    });
+
+                    swiper2 = new Swiper(".mySwiper2", {
+                        slidesPerView: 3,
+                        spaceBetween: 0,
+                        slidesPerGroup: 1,
+                        loop: true,
+                        loopFillGroupWithBlank: true,
+                        autoplay: true,
+                        pagination: {
+                            el: ".swiper-pagination2",
+                            clickable: true
+                        },
+                        navigation: {
+                            nextEl: ".swiper-button-next2",
+                            prevEl: ".swiper-button-prev2"
+                        },
+                        autoplay: {
+                            delay: 3000,
+                            stopOnLastSlide: false,
+                            disableOnInteraction: true,
+                        },
+                        breakpoints: {
+                            320: {
+                                slidesPerView: 1,
+                            },
+                            480: {
+                                slidesPerView: 1,
+                            },
+                            640: {
+                                slidesPerView: 2,
+                            },
+                            1200: {
+                                slidesPerView: 3,
+                            }
+                        }
+                    });
+                })
             })
+        })
 
         //報名
         let sign_event = ref('')
@@ -174,82 +257,82 @@ const app = {
             schedule_btn, scheduleIsopen,
             notice_btn, noticeIsopen,
             menuIsopen,
-            issue, speaker, life
+            issue, speaker, life,review
         }
     }
 }
 Vue.createApp(app).mount("#app")
 
-var swiper = new Swiper(".mySwiper1", {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    autoplay: true,
-    pagination: {
-        el: ".swiper-pagination1",
-        clickable: true
-    },
-    navigation: {
-        nextEl: ".swiper-button-next1",
-        prevEl: ".swiper-button-prev1"
-    },
-    autoplay: {
-        delay: 3000,
-        stopOnLastSlide: false,
-        disableOnInteraction: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-        },
-        480: {
-            slidesPerView: 1,
-        },
-        640: {
-            slidesPerView: 2,
-        },
-        1200: {
-            slidesPerView: 3,
-        }
-    }
-});
+// var swiper = new Swiper(".mySwiper1", {
+//     slidesPerView: 3,
+//     spaceBetween: 0,
+//     slidesPerGroup: 1,
+//     loop: true,
+//     loopFillGroupWithBlank: true,
+//     autoplay: true,
+//     pagination: {
+//         el: ".swiper-pagination1",
+//         clickable: true
+//     },
+//     navigation: {
+//         nextEl: ".swiper-button-next1",
+//         prevEl: ".swiper-button-prev1"
+//     },
+//     autoplay: {
+//         delay: 3000,
+//         stopOnLastSlide: false,
+//         disableOnInteraction: true,
+//     },
+//     breakpoints: {
+//         320: {
+//             slidesPerView: 1,
+//         },
+//         480: {
+//             slidesPerView: 1,
+//         },
+//         640: {
+//             slidesPerView: 2,
+//         },
+//         1200: {
+//             slidesPerView: 3,
+//         }
+//     }
+// });
 
-var swiper = new Swiper(".mySwiper2", {
-    slidesPerView: 3,
-    spaceBetween: 0,
-    slidesPerGroup: 1,
-    loop: true,
-    loopFillGroupWithBlank: true,
-    autoplay: true,
-    pagination: {
-        el: ".swiper-pagination2",
-        clickable: true
-    },
-    navigation: {
-        nextEl: ".swiper-button-next2",
-        prevEl: ".swiper-button-prev2"
-    },
-    autoplay: {
-        delay: 3000,
-        stopOnLastSlide: false,
-        disableOnInteraction: true,
-    },
-    breakpoints: {
-        320: {
-            slidesPerView: 1,
-        },
-        480: {
-            slidesPerView: 1,
-        },
-        640: {
-            slidesPerView: 2,
-        },
-        1200: {
-            slidesPerView: 3,
-        }
-    }
-});
+// var swiper = new Swiper(".mySwiper2", {
+//     slidesPerView: 3,
+//     spaceBetween: 0,
+//     slidesPerGroup: 1,
+//     loop: true,
+//     loopFillGroupWithBlank: true,
+//     autoplay: true,
+//     pagination: {
+//         el: ".swiper-pagination2",
+//         clickable: true
+//     },
+//     navigation: {
+//         nextEl: ".swiper-button-next2",
+//         prevEl: ".swiper-button-prev2"
+//     },
+//     autoplay: {
+//         delay: 3000,
+//         stopOnLastSlide: false,
+//         disableOnInteraction: true,
+//     },
+//     breakpoints: {
+//         320: {
+//             slidesPerView: 1,
+//         },
+//         480: {
+//             slidesPerView: 1,
+//         },
+//         640: {
+//             slidesPerView: 2,
+//         },
+//         1200: {
+//             slidesPerView: 3,
+//         }
+//     }
+// });
 
 
